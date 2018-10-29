@@ -1,0 +1,9 @@
+name: Forum Communications
+type: theme
+base theme: newsplus_lite
+description: 'A custom theme for Forum Communications.'
+
+# Information added by Drupal.org packaging script on 2017-12-18
+core: '8.x'
+project: 'forum'
+datestamp: 1513575488
