@@ -23,16 +23,3 @@ $local_settings = __DIR__ . "/settings.local.php";
 if (file_exists($local_settings)) {
   include $local_settings;
 }
-$databases['default']['default'] = array (
-  'database' => 'forumcom',
-  'username' => 'sjanowiak',
-  'password' => 'guitarg1',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['hash_salt'] = 'c319rz-2MOLqU6lWDo_b1G7KLU-Tci30RpY6l72e1OrxtZBoE9H4cL_cr25U9FmgnjoR6SOq4g';
-
-$settings['update_free_access'] = TRUE;
