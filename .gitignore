@@ -62,8 +62,6 @@ Thumbs.db
 !core/**/*.gz
 
 #Custom
-sites/default/settings.php
 vendor/behat/mink-selenium2-driver
 vendor/behat/
 vendor/drupal/
-vendor/grasmash/
