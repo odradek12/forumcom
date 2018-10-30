@@ -62,3 +62,4 @@ Thumbs.db
 !core/**/*.gz
 
 #Custom
+vendor/drupal/
