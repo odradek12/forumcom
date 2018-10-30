@@ -89,7 +89,7 @@
                 "dev-master": "1.7.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "Behat\\Mink\\": "src/"
@@ -259,7 +259,7 @@
                 "dev-master": "1.3.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "Behat\\Mink\\Driver\\": "src/"
