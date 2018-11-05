@@ -1,0 +1,13 @@
+.region-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#block-views-block-article-feed-block-1{
+	flex: 0 0 30%;
+}
+
+#block-forum-content {
+	flex: 0 0 70%;
+	padding-left: 3%;
+}

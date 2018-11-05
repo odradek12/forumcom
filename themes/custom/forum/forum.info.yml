@@ -4,10 +4,10 @@ base theme: newsplus_lite
 description: 'A custom theme for Forum Communications.'
 
 libraries:
-  - newsplus_lite/fontawesome
-  - newsplus_lite/fonts-roboto
-  - newsplus_lite/global-styling
-  - newsplus_lite/messages
+  - forum/fontawesome
+  - forum/fonts-roboto
+  - forum/global-styling
+  - forum/messages
 regions:
   pre_header_left: 'Pre Header Left'
   pre_header_right: 'Pre header Right'

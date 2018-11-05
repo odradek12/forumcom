@@ -55,6 +55,7 @@ global-styling:
       css/components/quickedit.css: {}
     theme:
       css/theme/color-default.css: {}
+      css/main.css: {}
 
 messages:
   version: VERSION

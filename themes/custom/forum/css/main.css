@@ -1,0 +1,20 @@
+/* line 1, ../sass/components/_content.scss */
+.region-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 6, ../sass/components/_content.scss */
+#block-views-block-article-feed-block-1 {
+  flex: 0 0 30%;
+}
+
+/* line 10, ../sass/components/_content.scss */
+#block-forum-content {
+  flex: 0 0 70%;
+  padding-left: 3%;
+}
+
+/*.footer-area {
+	background-color:olive; 
+}*/
