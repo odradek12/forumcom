@@ -62,4 +62,4 @@ Thumbs.db
 !core/**/*.gz
 
 #Custom
-vendor/drupal/
+vendor/drupal/coder
