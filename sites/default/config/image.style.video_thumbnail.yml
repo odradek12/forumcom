@@ -1,0 +1,14 @@
+uuid: 60ca462b-de1c-48d6-88a9-c7810d33e697
+langcode: en
+status: true
+dependencies: {  }
+name: video_thumbnail
+label: 'Video Thumbnail'
+effects:
+  b512dfae-470b-46c9-86ea-e4f9f582236b:
+    uuid: b512dfae-470b-46c9-86ea-e4f9f582236b
+    id: image_resize
+    weight: 1
+    data:
+      width: 300
+      height: 200

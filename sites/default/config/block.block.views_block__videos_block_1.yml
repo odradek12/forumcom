@@ -1,0 +1,24 @@
+uuid: b4278432-0da7-4f7f-82f8-1d9ca820d572
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.videos
+  module:
+    - views
+  theme:
+    - forum
+id: views_block__videos_block_1
+theme: forum
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:videos-block_1'
+settings:
+  id: 'views_block:videos-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,24 @@
+uuid: ae74f00e-751b-4e2c-857f-5e2dafeb12a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.article_feed
+  module:
+    - views
+  theme:
+    - forum
+id: views_block__article_feed_block_1
+theme: forum
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:article_feed-block_1'
+settings:
+  id: 'views_block:article_feed-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,14 @@
+uuid: d121f3c0-52c2-4b56-a099-cea90b5ddf27
+name: 'Forum Communications'
+mail: admin@dev-forumcom.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

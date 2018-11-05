@@ -1,0 +1,22 @@
+uuid: c9863389-cabb-40e6-a716-5ba7889f25b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forum
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: forum_messages
+theme: forum
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

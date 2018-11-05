@@ -1,0 +1,36 @@
+uuid: ca32f71f-1e70-43d7-aae0-4be6bb5a889f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.video.body
+    - field.field.node.video.field_thumbnail
+    - image.style.video_thumbnail
+    - node.type.video
+  module:
+    - image
+    - text
+    - user
+id: node.video.default
+targetEntityType: node
+bundle: video
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_thumbnail:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: video_thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  links: true
