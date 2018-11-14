@@ -2,23 +2,34 @@
 	display: flex;
 	flex-wrap: wrap;
 }
-
+/*Sidebar width constraints*/
 #block-views-block-article-feed-block-1{
-	flex: 0 0 30%;
+	flex: 1 1 30%;
 }
-
+/*Featured article width constraints*/
 #block-forum-content {
-	flex: 0 0 70%;
+	flex: 1 1 70%;
 	padding-left: 3%;
 }
 #main-content > .row{
 	display: flex;
 	.col-md-8 {
-		flex: 0 0 80%;
+		flex: 1 1 80%;
+	}
+	.col-md-4 {
+		max-width:25%;
 	}
 }
 
 .node--type-video > .node-content {
     display: flex;
     flex-direction: column-reverse;
+}
+
+/*Featured article images fill space*/
+@media (min-width: 1200px) {	
+	.field--name-field-image{
+		margin-left:0 !important;
+		max-width: 100% !important;
+	}
 }

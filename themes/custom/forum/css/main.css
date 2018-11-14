@@ -4,14 +4,16 @@
   flex-wrap: wrap;
 }
 
+/*Sidebar width constraints*/
 /* line 6, ../sass/components/_content.scss */
 #block-views-block-article-feed-block-1 {
-  flex: 0 0 30%;
+  flex: 1 1 30%;
 }
 
+/*Featured article width constraints*/
 /* line 10, ../sass/components/_content.scss */
 #block-forum-content {
-  flex: 0 0 70%;
+  flex: 1 1 70%;
   padding-left: 3%;
 }
 
@@ -21,15 +23,27 @@
 }
 /* line 16, ../sass/components/_content.scss */
 #main-content > .row .col-md-8 {
-  flex: 0 0 80%;
+  flex: 1 1 80%;
+}
+/* line 19, ../sass/components/_content.scss */
+#main-content > .row .col-md-4 {
+  max-width: 25%;
 }
 
-/* line 21, ../sass/components/_content.scss */
+/* line 24, ../sass/components/_content.scss */
 .node--type-video > .node-content {
   display: flex;
   flex-direction: column-reverse;
 }
 
+/*Featured article images fill space*/
+@media (min-width: 1200px) {
+  /* line 31, ../sass/components/_content.scss */
+  .field--name-field-image {
+    margin-left: 0 !important;
+    max-width: 100% !important;
+  }
+}
 /* line 1, ../sass/components/_footer.scss */
 #footer {
   background-color: #000;
