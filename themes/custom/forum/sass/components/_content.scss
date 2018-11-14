@@ -11,3 +11,14 @@
 	flex: 0 0 70%;
 	padding-left: 3%;
 }
+#main-content > .row{
+	display: flex;
+	.col-md-8 {
+		flex: 0 0 80%;
+	}
+}
+
+.node--type-video > .node-content {
+    display: flex;
+    flex-direction: column-reverse;
+}

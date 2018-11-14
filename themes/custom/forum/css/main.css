@@ -15,6 +15,33 @@
   padding-left: 3%;
 }
 
-/*.footer-area {
-	background-color:olive; 
-}*/
+/* line 14, ../sass/components/_content.scss */
+#main-content > .row {
+  display: flex;
+}
+/* line 16, ../sass/components/_content.scss */
+#main-content > .row .col-md-8 {
+  flex: 0 0 80%;
+}
+
+/* line 21, ../sass/components/_content.scss */
+.node--type-video > .node-content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* line 1, ../sass/components/_footer.scss */
+#footer {
+  background-color: #000;
+}
+
+/* line 1, ../sass/components/_header.scss */
+#header {
+  background-color: #f3f3f3;
+  border-bottom: none;
+}
+
+/* line 5, ../sass/components/_header.scss */
+#main-navigation ul.menu li a {
+  color: #000;
+}
