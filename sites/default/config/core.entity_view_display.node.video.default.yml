@@ -24,7 +24,7 @@ content:
     third_party_settings: {  }
     region: content
   field_thumbnail:
-    weight: 1
+    weight: 4
     label: hidden
     settings:
       image_style: video_thumbnail
