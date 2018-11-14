@@ -18,9 +18,9 @@ mode: teaser
 content:
   field_thumbnail:
     type: image
-    weight: 0
+    weight: 4
     region: content
-    label: above
+    label: hidden
     settings:
       image_style: video_thumbnail
       image_link: ''
