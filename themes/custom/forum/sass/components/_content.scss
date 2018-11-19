@@ -27,9 +27,24 @@
 }
 
 /*Featured article images fill space*/
-@media (min-width: 1200px) {	
+@media (min-width: 600px) {	
 	.field--name-field-image{
 		margin-left:0 !important;
 		max-width: 100% !important;
 	}
 }
+
+/*Minimize sizes of sidebar articles*/
+#block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content{
+	display: flex;
+	flex-direction: wrap;
+	/*Proportion thumbnail size*/
+	.teaser-image-wrapper {		
+    	flex: 1 0 40%;
+	}
+	/*Align header top with thumbnail top*/
+	h2.node__title.title {
+		margin-top: -4px;
+	}
+}
+/*:not(:first-child)*/

@@ -37,13 +37,31 @@
 }
 
 /*Featured article images fill space*/
-@media (min-width: 1200px) {
+@media (min-width: 600px) {
   /* line 31, ../sass/components/_content.scss */
   .field--name-field-image {
     margin-left: 0 !important;
     max-width: 100% !important;
   }
 }
+/*Minimize sizes of sidebar articles*/
+/* line 38, ../sass/components/_content.scss */
+#block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content {
+  display: flex;
+  flex-direction: wrap;
+  /*Proportion thumbnail size*/
+  /*Align header top with thumbnail top*/
+}
+/* line 42, ../sass/components/_content.scss */
+#block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content .teaser-image-wrapper {
+  flex: 1 0 40%;
+}
+/* line 46, ../sass/components/_content.scss */
+#block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content h2.node__title.title {
+  margin-top: -4px;
+}
+
+/*:not(:first-child)*/
 /* line 1, ../sass/components/_footer.scss */
 #footer {
   background-color: #000;
