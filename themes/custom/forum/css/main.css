@@ -7,13 +7,13 @@
 /*Sidebar width constraints*/
 /* line 6, ../sass/components/_content.scss */
 #block-views-block-article-feed-block-1 {
-  flex: 1 1 30%;
+  flex: 1 1 33.333333%;
 }
 
 /*Featured article width constraints*/
 /* line 10, ../sass/components/_content.scss */
 #block-forum-content {
-  flex: 1 1 70%;
+  flex: 1 1 66.666666%;
   padding-left: 3%;
 }
 
@@ -45,20 +45,25 @@
   }
 }
 /*Minimize sizes of sidebar articles*/
-/* line 38, ../sass/components/_content.scss */
+/* line 39, ../sass/components/_content.scss */
+#block-views-block-article-feed-block-1 h2.node__title.title {
+  font-size: 16px;
+}
+/* line 42, ../sass/components/_content.scss */
 #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content {
   display: flex;
   flex-direction: wrap;
   /*Proportion thumbnail size*/
   /*Align header top with thumbnail top*/
 }
-/* line 42, ../sass/components/_content.scss */
+/* line 46, ../sass/components/_content.scss */
 #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content .teaser-image-wrapper {
   flex: 1 0 40%;
 }
-/* line 46, ../sass/components/_content.scss */
+/* line 50, ../sass/components/_content.scss */
 #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content h2.node__title.title {
   margin-top: -4px;
+  margin-left: 10px;
 }
 
 /*:not(:first-child)*/
