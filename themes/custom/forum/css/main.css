@@ -1,36 +1,36 @@
-/* line 1, ../sass/components/_content.scss */
+/* line 2, ../sass/components/_content.scss */
 .region-content {
   display: flex;
   flex-wrap: wrap;
 }
 
 /*Sidebar width constraints*/
-/* line 6, ../sass/components/_content.scss */
+/* line 7, ../sass/components/_content.scss */
 #block-views-block-article-feed-block-1 {
-  flex: 1 1 33.333333%;
+  flex: 1 1 30%;
 }
 
 /*Featured article width constraints*/
-/* line 10, ../sass/components/_content.scss */
+/* line 11, ../sass/components/_content.scss */
 #block-forum-content {
-  flex: 1 1 66.666666%;
+  flex: 1 1 70%;
   padding-left: 3%;
 }
 
-/* line 14, ../sass/components/_content.scss */
+/* line 15, ../sass/components/_content.scss */
 #main-content > .row {
   display: flex;
 }
-/* line 16, ../sass/components/_content.scss */
+/* line 17, ../sass/components/_content.scss */
 #main-content > .row .col-md-8 {
   flex: 1 1 80%;
 }
-/* line 19, ../sass/components/_content.scss */
+/* line 20, ../sass/components/_content.scss */
 #main-content > .row .col-md-4 {
-  max-width: 25%;
+  max-width: 20%;
 }
 
-/* line 24, ../sass/components/_content.scss */
+/* line 25, ../sass/components/_content.scss */
 .node--type-video > .node-content {
   display: flex;
   flex-direction: column-reverse;
@@ -38,30 +38,65 @@
 
 /*Featured article images fill space*/
 @media (min-width: 600px) {
-  /* line 31, ../sass/components/_content.scss */
+  /* line 32, ../sass/components/_content.scss */
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  /* line 36, ../sass/components/_content.scss */
   .field--name-field-image {
     margin-left: 0 !important;
     max-width: 100% !important;
   }
 }
 /*Minimize sizes of sidebar articles*/
-/* line 39, ../sass/components/_content.scss */
-#block-views-block-article-feed-block-1 h2.node__title.title {
-  font-size: 16px;
+/* line 43, ../sass/components/_content.scss */
+.region-content #block-views-block-article-feed-block-1 {
+  /*Resizes first article's thumbnail to parent container's width*/
 }
-/* line 42, ../sass/components/_content.scss */
-#block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content {
+/* line 44, ../sass/components/_content.scss */
+.region-content #block-views-block-article-feed-block-1 > h2.title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #3399ff;
+  border-bottom: none;
+  margin-top: 0;
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+/* line 54, ../sass/components/_content.scss */
+.region-content #block-views-block-article-feed-block-1 h2.node__title.title {
+  font-size: 16px;
+  text-transform: none;
+  border-bottom: none;
+}
+/* line 60, ../sass/components/_content.scss */
+.region-content #block-views-block-article-feed-block-1 a.image-popup.overlayed, .region-content #block-views-block-article-feed-block-1 img.image-style-article-standard {
+  width: 100%;
+}
+/* line 63, ../sass/components/_content.scss */
+.region-content #block-views-block-article-feed-block-1 .views-row {
+  border-bottom: 1px solid lightgrey;
+}
+/* line 66, ../sass/components/_content.scss */
+.region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) {
+  margin-top: 25px;
+}
+/* line 69, ../sass/components/_content.scss */
+.region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content {
   display: flex;
   flex-direction: wrap;
   /*Proportion thumbnail size*/
   /*Align header top with thumbnail top*/
 }
-/* line 46, ../sass/components/_content.scss */
-#block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content .teaser-image-wrapper {
-  flex: 1 0 40%;
+/* line 73, ../sass/components/_content.scss */
+.region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content .teaser-image-wrapper {
+  flex: 1 0 30%;
 }
-/* line 50, ../sass/components/_content.scss */
-#block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content h2.node__title.title {
+/* line 77, ../sass/components/_content.scss */
+.region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content h2.node__title.title {
   margin-top: -4px;
   margin-left: 10px;
 }

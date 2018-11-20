@@ -215,7 +215,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Article Feed'
+      title: 'Latest Stories'
       header: {  }
       footer: {  }
       empty: {  }
