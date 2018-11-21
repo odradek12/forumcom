@@ -101,7 +101,20 @@
   margin-left: 10px;
 }
 
-/*:not(:first-child)*/
+/* line 85, ../sass/components/_content.scss */
+.region-content #block-views-block-videos-block-1 > h2.title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #3399ff;
+  border-bottom: none;
+  margin-top: 0;
+  margin-left: 35%;
+  margin-right: 35%;
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+
 /* line 1, ../sass/components/_footer.scss */
 #footer {
   background-color: #000;

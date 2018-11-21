@@ -13,3 +13,10 @@ effects:
       width: 800
       height: 600
       upscale: false
+  d97bf1d4-77ea-4cad-879d-a247ff2f0f77:
+    uuid: d97bf1d4-77ea-4cad-879d-a247ff2f0f77
+    id: image_resize
+    weight: 2
+    data:
+      width: 800
+      height: 600

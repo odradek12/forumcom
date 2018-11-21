@@ -6,7 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.video.body
     - field.field.node.video.field_thumbnail
-    - image.style.video_thumbnail
+    - image.style.article_standard
     - node.type.video
   module:
     - image
@@ -22,7 +22,7 @@ content:
     region: content
     label: hidden
     settings:
-      image_style: video_thumbnail
+      image_style: article_standard
       image_link: ''
     third_party_settings: {  }
 hidden:

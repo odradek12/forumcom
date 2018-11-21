@@ -1,4 +1,4 @@
-
+$headercolor1:#3399ff;
 .region-content {
 	display: flex;
 	flex-wrap: wrap;
@@ -45,7 +45,7 @@
 		text-align: center;
 		text-transform: uppercase;
 		color:  #ffffff;
-		background-color: #3399ff;
+		background-color: $headercolor1;
 		border-bottom: none;
 		margin-top: 0;
 		padding-bottom: 7px;
@@ -81,4 +81,17 @@
 		}
 	}
 }
-/*:not(:first-child)*/
+.region-content #block-views-block-videos-block-1 {
+	> h2.title {
+		text-align: center;
+		text-transform: uppercase;
+		color:  #ffffff;
+		background-color: $headercolor1;
+		border-bottom: none;
+		margin-top: 0;
+		margin-left: 35%;
+		margin-right: 35%;
+		padding-bottom: 7px;
+		padding-top: 7px;
+	}
+}
