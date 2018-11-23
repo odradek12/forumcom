@@ -1,9 +1,0 @@
-uuid: 9c32509d-fceb-4d6a-b9c6-36b279d84cec
-langcode: en
-status: true
-dependencies: {  }
-id: dual_feed
-label: 'Dual Feed'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

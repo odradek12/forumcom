@@ -1,0 +1,24 @@
+uuid: d3952311-59e7-4e75-bb1b-9e9f708f9fcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author_date_info
+    - node.type.article
+  module:
+    - text
+id: node.article.field_author_date_info
+field_name: field_author_date_info
+entity_type: node
+bundle: article
+label: 'Author Date Info'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: asdf
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text

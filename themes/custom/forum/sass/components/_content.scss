@@ -81,6 +81,35 @@ $headercolor1:#3399ff;
 		}
 	}
 }
+/*Featured articles*/
+.region-content #block-forum-content{
+	/*Apply flex to article*/
+    .views-row{
+    	display: flex;
+	    flex-wrap: wrap;
+	}
+	.with-image {
+		margin-right: 0; 
+	}
+	/*Styling article title*/
+	.views-field-title .field-content a{
+		color: black;
+	    font-weight: 600;
+	    font-size: 22px;
+	    text-transform: uppercase;
+	}
+	/*Article subtitle*/
+	.views-field-body{
+		margin-top: 1%;
+		margin-bottom: 1%;
+	}
+	.views-field-uid {
+		margin-right: 1%;
+	}
+	span.views-label.views-label-view-node {
+		margin: 0 20px;
+	}
+}
 .region-content #block-views-block-videos-block-1 {
 	> h2.title {
 		text-align: center;
@@ -93,5 +122,15 @@ $headercolor1:#3399ff;
 		margin-right: 35%;
 		padding-bottom: 7px;
 		padding-top: 7px;
+	}
+	h2.node__title.title{
+		border-bottom: none;
+	}
+	/*Spacing for video teasers*/
+	.views-row.clearfix {
+	    display: flex;
+	}
+	.views-col.col-2 {
+	    margin-left: 5%;
 	}
 }

@@ -101,7 +101,48 @@
   margin-left: 10px;
 }
 
+/*Featured articles*/
 /* line 85, ../sass/components/_content.scss */
+.region-content #block-forum-content {
+  /*Apply flex to article*/
+  /*Styling article title*/
+  /*Article subtitle*/
+}
+/* line 87, ../sass/components/_content.scss */
+.region-content #block-forum-content .views-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 91, ../sass/components/_content.scss */
+.region-content #block-forum-content .with-image {
+  margin-right: 0;
+}
+/* line 95, ../sass/components/_content.scss */
+.region-content #block-forum-content .views-field-title .field-content a {
+  color: black;
+  font-weight: 600;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+/* line 102, ../sass/components/_content.scss */
+.region-content #block-forum-content .views-field-body {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+/* line 106, ../sass/components/_content.scss */
+.region-content #block-forum-content .views-field-uid {
+  margin-right: 1%;
+}
+/* line 109, ../sass/components/_content.scss */
+.region-content #block-forum-content span.views-label.views-label-view-node {
+  margin: 0 20px;
+}
+
+/* line 113, ../sass/components/_content.scss */
+.region-content #block-views-block-videos-block-1 {
+  /*Spacing for video teasers*/
+}
+/* line 114, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 > h2.title {
   text-align: center;
   text-transform: uppercase;
@@ -113,6 +154,18 @@
   margin-right: 35%;
   padding-bottom: 7px;
   padding-top: 7px;
+}
+/* line 126, ../sass/components/_content.scss */
+.region-content #block-views-block-videos-block-1 h2.node__title.title {
+  border-bottom: none;
+}
+/* line 130, ../sass/components/_content.scss */
+.region-content #block-views-block-videos-block-1 .views-row.clearfix {
+  display: flex;
+}
+/* line 133, ../sass/components/_content.scss */
+.region-content #block-views-block-videos-block-1 .views-col.col-2 {
+  margin-left: 5%;
 }
 
 /* line 1, ../sass/components/_footer.scss */

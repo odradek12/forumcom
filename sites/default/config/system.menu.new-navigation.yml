@@ -1,0 +1,8 @@
+uuid: ead9ba92-6548-4ff2-bdf2-22a28ffc1e1c
+langcode: en
+status: true
+dependencies: {  }
+id: new-navigation
+label: 'New Navigation'
+description: ''
+locked: false

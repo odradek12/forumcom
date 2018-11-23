@@ -1,0 +1,16 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: false
+favicon:
+  use_default: 1
+header: ''
+fixed_header: 1
+scrolltop: ''
+scrolltop_display: 1
+bootstrap_remote_type: cdn
+premium_description: ''
