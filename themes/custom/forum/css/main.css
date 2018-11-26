@@ -228,9 +228,13 @@
 .region-navigation div#block-liveweatherblock .live-weather .image {
   margin-top: -7px;
 }
+/* line 42, ../sass/components/_header.scss */
+.region-navigation div#block-fccchannellinks {
+  flex: 0;
+}
 
 /*Replace "Home" menu with hamburger menu*/
-/* line 44, ../sass/components/_header.scss */
+/* line 47, ../sass/components/_header.scss */
 ul#superfish-new-navigation.hamburger-test {
   background-image: url("/sites/default/files/2018-11/hamburger_icon.png");
   background-size: 50px;
@@ -238,14 +242,14 @@ ul#superfish-new-navigation.hamburger-test {
   width: 50px;
   /*a:first-child {*/
 }
-/* line 50, ../sass/components/_header.scss */
+/* line 53, ../sass/components/_header.scss */
 ul#superfish-new-navigation.hamburger-test a.is-active.sf-depth-1.menuparent {
   visibility: hidden;
 }
 
 /*Aligns menu items with hamburger button*/
 /*.hamburger-test {*/
-/* line 56, ../sass/components/_header.scss */
+/* line 59, ../sass/components/_header.scss */
 ul.sf-menu.sf-vertical li.sfHover > ul {
   left: 0;
 }
