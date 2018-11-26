@@ -5,3 +5,19 @@
 #main-navigation ul.menu li a {
 	color: #000;
 }
+ul#superfish-new-navigation.hamburger-test {
+	background-image: url("/sites/default/files/2018-11/hamburger_icon.png");
+	background-size: 50px;
+	background-repeat: no-repeat;
+	width:50px;
+	/*a:first-child {*/
+	a.is-active.sf-depth-1.menuparent {
+		visibility: hidden;
+	}	
+}
+/*Aligns menu items with hamburger button*/
+/*.hamburger-test {*/
+	ul.sf-menu.sf-vertical li.sfHover > ul {
+	    left: 0;
+	}
+/*}*/
