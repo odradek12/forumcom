@@ -5,6 +5,42 @@
 #main-navigation ul.menu li a {
 	color: #000;
 }
+/*Orients the header*/
+.region-navigation {
+	display: flex;
+	#block-newnavigation {
+		flex: 0;
+	}
+	/*Positions logo horizontally*/
+	nav#block-forum-main-menu{
+		background-image: url("/sites/default/files/2018-11/fls-logo_002.gif");
+		background-size: 150px;
+		background-repeat: no-repeat;
+		width:150px;
+		margin: auto;
+		/*Hides "Home" text*/
+		li a {
+		    visibility: hidden;
+		}
+	}
+	/*Weather block*/
+	div#block-liveweatherblock {
+	    color: black;
+	    width: 200px;
+	    height: 50px;
+	    padding-top: 5px;
+	    .live-weather {
+		    display: flex;
+		    .city{
+		    	display: none;
+		    }
+		    .image{
+	    	    margin-top: -7px;
+		    }
+		}
+	 }
+}
+/*Replace "Home" menu with hamburger menu*/
 ul#superfish-new-navigation.hamburger-test {
 	background-image: url("/sites/default/files/2018-11/hamburger_icon.png");
 	background-size: 50px;
@@ -19,5 +55,5 @@ ul#superfish-new-navigation.hamburger-test {
 /*.hamburger-test {*/
 	ul.sf-menu.sf-vertical li.sfHover > ul {
 	    left: 0;
-	}
+	} 
 /*}*/

@@ -9,7 +9,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://fls-logo_002_0.gif'
+  path: 'public://fls-logo_002.gif'
   url: ''
   use_default: false
 _core:

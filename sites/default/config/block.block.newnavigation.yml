@@ -11,7 +11,7 @@ dependencies:
 id: newnavigation
 theme: forum
 region: navigation
-weight: 0
+weight: -9
 provider: null
 plugin: 'superfish:new-navigation'
 settings:

@@ -154,12 +154,16 @@ class PhpDumper extends Dumper
             }
         }
 
-        (new AnalyzeServiceReferencesPass(false))->process($this->container);
+        (new AnalyzeServiceReferencesPass(false, !$this->getProxyDumper() instanceof NullDumper))->process($this->container);
         $this->circularReferences = array();
-        $checkedNodes = array();
-        foreach ($this->container->getCompiler()->getServiceReferenceGraph()->getNodes() as $id => $node) {
-            $currentPath = array($id => $id);
-            $this->analyzeCircularReferences($node->getOutEdges(), $checkedNodes, $currentPath);
+        foreach (array(true, false) as $byConstructor) {
+            foreach ($this->container->getCompiler()->getServiceReferenceGraph()->getNodes() as $id => $node) {
+                if (!$node->getValue() instanceof Definition) {
+                    continue;
+                }
+                $currentPath = array($id => true);
+                $this->analyzeCircularReferences($node->getOutEdges(), $currentPath, $id, $byConstructor);
+            }
         }
         $this->container->getCompiler()->getServiceReferenceGraph()->clear();
 
@@ -297,23 +301,31 @@ EOF;
         return $this->proxyDumper;
     }
 
-    private function analyzeCircularReferences(array $edges, &$checkedNodes, &$currentPath)
+    private function analyzeCircularReferences(array $edges, &$currentPath, $sourceId, $byConstructor)
     {
         foreach ($edges as $edge) {
+            if ($byConstructor && !$edge->isReferencedByConstructor()) {
+                continue;
+            }
             $node = $edge->getDestNode();
             $id = $node->getId();
 
-            if ($node->getValue() && ($edge->isLazy() || $edge->isWeak())) {
+            if (!$node->getValue() instanceof Definition || $sourceId === $id || $edge->isLazy() || $edge->isWeak()) {
                 // no-op
             } elseif (isset($currentPath[$id])) {
+                $currentId = $id;
                 foreach (array_reverse($currentPath) as $parentId) {
-                    $this->circularReferences[$parentId][$id] = $id;
-                    $id = $parentId;
+                    if (!isset($this->circularReferences[$parentId][$currentId])) {
+                        $this->circularReferences[$parentId][$currentId] = $byConstructor;
+                    }
+                    if ($parentId === $id) {
+                        break;
+                    }
+                    $currentId = $parentId;
                 }
-            } elseif (!isset($checkedNodes[$id])) {
-                $checkedNodes[$id] = true;
+            } else {
                 $currentPath[$id] = $id;
-                $this->analyzeCircularReferences($node->getOutEdges(), $checkedNodes, $currentPath);
+                $this->analyzeCircularReferences($node->getOutEdges(), $currentPath, $id, $byConstructor);
                 unset($currentPath[$id]);
             }
         }
@@ -591,7 +603,7 @@ EOF;
         $this->definitionVariables = new \SplObjectStorage();
         $this->referenceVariables = array();
         $this->variableCount = 0;
-        $this->definitionVariables[$definition] = $this->referenceVariables[$id] = new Variable('instance');
+        $this->referenceVariables[$id] = new Variable('instance');
 
         $return = array();
 
@@ -663,22 +675,7 @@ EOF;
             $code .= sprintf("        @trigger_error(%s, E_USER_DEPRECATED);\n\n", $this->export($definition->getDeprecationMessage($id)));
         }
 
-        $head = $tail = '';
-        $arguments = array($definition->getArguments(), $definition->getFactory());
-        $this->addInlineVariables($head, $tail, $id, $arguments, true);
-        $code .= '' !== $head ? $head."\n" : '';
-
-        if ($arguments = array_filter(array($definition->getProperties(), $definition->getMethodCalls(), $definition->getConfigurator()))) {
-            $this->addInlineVariables($tail, $tail, $id, $arguments, false);
-
-            $tail .= '' !== $tail ? "\n" : '';
-            $tail .= $this->addServiceProperties($definition);
-            $tail .= $this->addServiceMethodCalls($definition);
-            $tail .= $this->addServiceConfigurator($definition);
-        }
-
-        $code .= $this->addServiceInstance($id, $definition, '' === $tail)
-            .('' !== $tail ? "\n".$tail."\n        return \$instance;\n" : '');
+        $code .= $this->addInlineService($id, $definition);
 
         if ($asFile) {
             $code = implode("\n", array_map(function ($line) { return $line ? substr($line, 8) : $line; }, explode("\n", $code)));
@@ -692,35 +689,45 @@ EOF;
         return $code;
     }
 
-    private function addInlineVariables(&$head, &$tail, $id, array $arguments, $forConstructor)
+    private function addInlineVariables($id, Definition $definition, array $arguments, $forConstructor)
     {
-        $hasSelfRef = false;
+        $code = '';
 
         foreach ($arguments as $argument) {
             if (\is_array($argument)) {
-                $hasSelfRef = $this->addInlineVariables($head, $tail, $id, $argument, $forConstructor) || $hasSelfRef;
+                $code .= $this->addInlineVariables($id, $definition, $argument, $forConstructor);
             } elseif ($argument instanceof Reference) {
-                $hasSelfRef = $this->addInlineReference($head, $id, $this->container->normalizeId($argument), $forConstructor) || $hasSelfRef;
+                $code .= $this->addInlineReference($id, $definition, $this->container->normalizeId($argument), $forConstructor);
             } elseif ($argument instanceof Definition) {
-                $hasSelfRef = $this->addInlineService($head, $tail, $id, $argument, $forConstructor) || $hasSelfRef;
+                $code .= $this->addInlineService($id, $definition, $argument, $forConstructor);
             }
         }
 
-        return $hasSelfRef;
+        return $code;
     }
 
-    private function addInlineReference(&$code, $id, $targetId, $forConstructor)
+    private function addInlineReference($id, Definition $definition, $targetId, $forConstructor)
     {
-        $hasSelfRef = isset($this->circularReferences[$id][$targetId]);
-
-        if ('service_container' === $targetId || isset($this->referenceVariables[$targetId])) {
-            return $hasSelfRef;
-        }
-
         list($callCount, $behavior) = $this->serviceCalls[$targetId];
 
-        if (2 > $callCount && (!$hasSelfRef || !$forConstructor)) {
-            return $hasSelfRef;
+        while ($this->container->hasAlias($targetId)) {
+            $targetId = (string) $this->container->getAlias($targetId);
+        }
+
+        if ($id === $targetId) {
+            return $this->addInlineService($id, $definition, $definition);
+        }
+
+        if ('service_container' === $targetId || isset($this->referenceVariables[$targetId])) {
+            return '';
+        }
+
+        $hasSelfRef = isset($this->circularReferences[$id][$targetId]);
+        $forConstructor = $forConstructor && !isset($this->definitionVariables[$definition]);
+        $code = $hasSelfRef && $this->circularReferences[$id][$targetId] && !$forConstructor ? $this->addInlineService($id, $definition, $definition) : '';
+
+        if (isset($this->referenceVariables[$targetId]) || (2 > $callCount && (!$hasSelfRef || !$forConstructor))) {
+            return $code;
         }
 
         $name = $this->getNextVariableName();
@@ -730,7 +737,7 @@ EOF;
         $code .= sprintf("        \$%s = %s;\n", $name, $this->getServiceCall($targetId, $reference));
 
         if (!$hasSelfRef || !$forConstructor) {
-            return $hasSelfRef;
+            return $code;
         }
 
         $code .= sprintf(<<<'EOTXT'
@@ -745,46 +752,56 @@ EOTXT
             $id
         );
 
-        return false;
+        return $code;
     }
 
-    private function addInlineService(&$head, &$tail, $id, Definition $definition, $forConstructor)
+    private function addInlineService($id, Definition $definition, Definition $inlineDef = null, $forConstructor = true)
     {
-        if (isset($this->definitionVariables[$definition])) {
-            return false;
+        $isSimpleInstance = $isRootInstance = null === $inlineDef;
+
+        if (isset($this->definitionVariables[$inlineDef = $inlineDef ?: $definition])) {
+            return '';
         }
 
-        $arguments = array($definition->getArguments(), $definition->getFactory());
+        $arguments = array($inlineDef->getArguments(), $inlineDef->getFactory());
 
-        if (2 > $this->inlinedDefinitions[$definition] && !$definition->getMethodCalls() && !$definition->getProperties() && !$definition->getConfigurator()) {
-            return $this->addInlineVariables($head, $tail, $id, $arguments, $forConstructor);
+        $code = $this->addInlineVariables($id, $definition, $arguments, $forConstructor);
+
+        if ($arguments = array_filter(array($inlineDef->getProperties(), $inlineDef->getMethodCalls(), $inlineDef->getConfigurator()))) {
+            $isSimpleInstance = false;
+        } elseif ($definition !== $inlineDef && 2 > $this->inlinedDefinitions[$inlineDef]) {
+            return $code;
         }
 
-        $name = $this->getNextVariableName();
-        $this->definitionVariables[$definition] = new Variable($name);
-
-        $code = '';
-        if ($forConstructor) {
-            $hasSelfRef = $this->addInlineVariables($code, $tail, $id, $arguments, $forConstructor);
+        if (isset($this->definitionVariables[$inlineDef])) {
+            $isSimpleInstance = false;
         } else {
-            $hasSelfRef = $this->addInlineVariables($code, $code, $id, $arguments, $forConstructor);
+            $name = $definition === $inlineDef ? 'instance' : $this->getNextVariableName();
+            $this->definitionVariables[$inlineDef] = new Variable($name);
+            $code .= '' !== $code ? "\n" : '';
+
+            if ('instance' === $name) {
+                $code .= $this->addServiceInstance($id, $definition, $isSimpleInstance);
+            } else {
+                $code .= $this->addNewInstance($inlineDef, '$'.$name, ' = ', $id);
+            }
+
+            if ('' !== $inline = $this->addInlineVariables($id, $definition, $arguments, false)) {
+                $code .= "\n".$inline."\n";
+            } elseif ($arguments && 'instance' === $name) {
+                $code .= "\n";
+            }
+
+            $code .= $this->addServiceProperties($inlineDef, $name);
+            $code .= $this->addServiceMethodCalls($inlineDef, $name);
+            $code .= $this->addServiceConfigurator($inlineDef, $name);
         }
-        $code .= $this->addNewInstance($definition, '$'.$name, ' = ', $id);
-        $hasSelfRef && !$forConstructor ? $tail .= ('' !== $tail ? "\n" : '').$code : $head .= ('' !== $head ? "\n" : '').$code;
 
-        $code = '';
-        $arguments = array($definition->getProperties(), $definition->getMethodCalls(), $definition->getConfigurator());
-        $hasSelfRef = $this->addInlineVariables($code, $code, $id, $arguments, false) || $hasSelfRef;
-
-        $code .= '' !== $code ? "\n" : '';
-        $code .= $this->addServiceProperties($definition, $name);
-        $code .= $this->addServiceMethodCalls($definition, $name);
-        $code .= $this->addServiceConfigurator($definition, $name);
-        if ('' !== $code) {
-            $hasSelfRef ? $tail .= ('' !== $tail ? "\n" : '').$code : $head .= $code;
+        if ($isRootInstance && !$isSimpleInstance) {
+            $code .= "\n        return \$instance;\n";
         }
 
-        return $hasSelfRef;
+        return $code;
     }
 
     /**
@@ -1350,7 +1367,7 @@ EOF;
     /*{$this->docStar}
      * Computes a dynamic parameter.
      *
-     * @param string The name of the dynamic parameter to load
+     * @param string \$name The name of the dynamic parameter to load
      *
      * @return mixed The value of the dynamic parameter
      *

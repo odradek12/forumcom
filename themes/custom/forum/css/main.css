@@ -185,7 +185,52 @@
   color: #000;
 }
 
-/* line 8, ../sass/components/_header.scss */
+/*Orients the header*/
+/* line 9, ../sass/components/_header.scss */
+.region-navigation {
+  display: flex;
+  /*Positions logo horizontally*/
+  /*Weather block*/
+}
+/* line 11, ../sass/components/_header.scss */
+.region-navigation #block-newnavigation {
+  flex: 0;
+}
+/* line 15, ../sass/components/_header.scss */
+.region-navigation nav#block-forum-main-menu {
+  background-image: url("/sites/default/files/2018-11/fls-logo_002.gif");
+  background-size: 150px;
+  background-repeat: no-repeat;
+  width: 150px;
+  margin: auto;
+  /*Hides "Home" text*/
+}
+/* line 22, ../sass/components/_header.scss */
+.region-navigation nav#block-forum-main-menu li a {
+  visibility: hidden;
+}
+/* line 27, ../sass/components/_header.scss */
+.region-navigation div#block-liveweatherblock {
+  color: black;
+  width: 200px;
+  height: 50px;
+  padding-top: 5px;
+}
+/* line 32, ../sass/components/_header.scss */
+.region-navigation div#block-liveweatherblock .live-weather {
+  display: flex;
+}
+/* line 34, ../sass/components/_header.scss */
+.region-navigation div#block-liveweatherblock .live-weather .city {
+  display: none;
+}
+/* line 37, ../sass/components/_header.scss */
+.region-navigation div#block-liveweatherblock .live-weather .image {
+  margin-top: -7px;
+}
+
+/*Replace "Home" menu with hamburger menu*/
+/* line 44, ../sass/components/_header.scss */
 ul#superfish-new-navigation.hamburger-test {
   background-image: url("/sites/default/files/2018-11/hamburger_icon.png");
   background-size: 50px;
@@ -193,14 +238,14 @@ ul#superfish-new-navigation.hamburger-test {
   width: 50px;
   /*a:first-child {*/
 }
-/* line 14, ../sass/components/_header.scss */
+/* line 50, ../sass/components/_header.scss */
 ul#superfish-new-navigation.hamburger-test a.is-active.sf-depth-1.menuparent {
   visibility: hidden;
 }
 
 /*Aligns menu items with hamburger button*/
 /*.hamburger-test {*/
-/* line 20, ../sass/components/_header.scss */
+/* line 56, ../sass/components/_header.scss */
 ul.sf-menu.sf-vertical li.sfHover > ul {
   left: 0;
 }

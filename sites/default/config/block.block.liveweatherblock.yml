@@ -1,0 +1,23 @@
+uuid: 7c6b6528-0ec6-4ad3-98cf-13da36438a43
+langcode: en
+status: true
+dependencies:
+  module:
+    - live_weather
+  theme:
+    - forum
+id: liveweatherblock
+theme: forum
+region: navigation
+weight: -7
+provider: null
+plugin: live_weather_block
+settings:
+  id: live_weather_block
+  label: 'Live Weather block'
+  provider: live_weather
+  label_display: '0'
+  list:
+    list:
+      12783161: '12783161'
+visibility: {  }

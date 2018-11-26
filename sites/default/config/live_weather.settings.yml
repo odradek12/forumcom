@@ -1,0 +1,11 @@
+settings:
+  unit: F
+  image: true
+  wind: false
+  humidity: false
+  visibility: false
+  sunrise: false
+  sunset: false
+  cache: 0
+_core:
+  default_config_hash: qVY-a2Hr-KzOkPaRUrVeBul_mgPThNLVctEsfljRAZ4
