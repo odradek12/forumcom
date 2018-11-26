@@ -1,36 +1,36 @@
-/* line 2, ../sass/components/_content.scss */
+/* line 3, ../sass/components/_content.scss */
 .region-content {
   display: flex;
   flex-wrap: wrap;
 }
 
 /*Sidebar width constraints*/
-/* line 7, ../sass/components/_content.scss */
+/* line 8, ../sass/components/_content.scss */
 #block-views-block-article-feed-block-1 {
   flex: 1 1 30%;
 }
 
 /*Featured article width constraints*/
-/* line 11, ../sass/components/_content.scss */
+/* line 12, ../sass/components/_content.scss */
 #block-forum-content {
   flex: 1 1 70%;
   padding-left: 3%;
 }
 
-/* line 15, ../sass/components/_content.scss */
+/* line 16, ../sass/components/_content.scss */
 #main-content > .row {
   display: flex;
 }
-/* line 17, ../sass/components/_content.scss */
+/* line 18, ../sass/components/_content.scss */
 #main-content > .row .col-md-8 {
   flex: 1 1 80%;
 }
-/* line 20, ../sass/components/_content.scss */
+/* line 21, ../sass/components/_content.scss */
 #main-content > .row .col-md-4 {
   max-width: 20%;
 }
 
-/* line 25, ../sass/components/_content.scss */
+/* line 26, ../sass/components/_content.scss */
 .node--type-video > .node-content {
   display: flex;
   flex-direction: column-reverse;
@@ -38,24 +38,24 @@
 
 /*Featured article images fill space*/
 @media (min-width: 600px) {
-  /* line 32, ../sass/components/_content.scss */
+  /* line 33, ../sass/components/_content.scss */
   .container {
     padding-left: 25px;
     padding-right: 25px;
   }
 
-  /* line 36, ../sass/components/_content.scss */
+  /* line 37, ../sass/components/_content.scss */
   .field--name-field-image {
     margin-left: 0 !important;
     max-width: 100% !important;
   }
 }
 /*Minimize sizes of sidebar articles*/
-/* line 43, ../sass/components/_content.scss */
+/* line 44, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 {
   /*Resizes first article's thumbnail to parent container's width*/
 }
-/* line 44, ../sass/components/_content.scss */
+/* line 45, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 > h2.title {
   text-align: center;
   text-transform: uppercase;
@@ -66,83 +66,84 @@
   padding-bottom: 7px;
   padding-top: 7px;
 }
-/* line 54, ../sass/components/_content.scss */
+/* line 55, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 h2.node__title.title {
   font-size: 16px;
   text-transform: none;
   border-bottom: none;
 }
-/* line 60, ../sass/components/_content.scss */
+/* line 61, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 a.image-popup.overlayed, .region-content #block-views-block-article-feed-block-1 img.image-style-article-standard {
   width: 100%;
 }
-/* line 63, ../sass/components/_content.scss */
+/* line 64, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row {
   border-bottom: 1px solid lightgrey;
 }
-/* line 66, ../sass/components/_content.scss */
+/* line 67, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) {
   margin-top: 25px;
 }
-/* line 69, ../sass/components/_content.scss */
+/* line 70, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content {
   display: flex;
   flex-direction: wrap;
   /*Proportion thumbnail size*/
   /*Align header top with thumbnail top*/
 }
-/* line 73, ../sass/components/_content.scss */
+/* line 74, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content .teaser-image-wrapper {
   flex: 1 0 30%;
 }
-/* line 77, ../sass/components/_content.scss */
+/* line 78, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content h2.node__title.title {
   margin-top: -4px;
   margin-left: 10px;
 }
 
 /*Featured articles*/
-/* line 85, ../sass/components/_content.scss */
+/* line 86, ../sass/components/_content.scss */
 .region-content #block-forum-content {
   /*Apply flex to article*/
   /*Styling article title*/
   /*Article subtitle*/
 }
-/* line 87, ../sass/components/_content.scss */
+/* line 88, ../sass/components/_content.scss */
 .region-content #block-forum-content .views-row {
   display: flex;
   flex-wrap: wrap;
 }
-/* line 91, ../sass/components/_content.scss */
+/* line 92, ../sass/components/_content.scss */
 .region-content #block-forum-content .with-image {
   margin-right: 0;
 }
-/* line 95, ../sass/components/_content.scss */
+/* line 96, ../sass/components/_content.scss */
 .region-content #block-forum-content .views-field-title .field-content a {
   color: black;
-  font-weight: 600;
-  font-size: 22px;
+  /*font-weight: 600;*/
+  font-family: "arial black";
+  font-size: 24px;
   text-transform: uppercase;
 }
-/* line 102, ../sass/components/_content.scss */
+/* line 104, ../sass/components/_content.scss */
 .region-content #block-forum-content .views-field-body {
   margin-top: 1%;
   margin-bottom: 1%;
 }
-/* line 106, ../sass/components/_content.scss */
+/* line 108, ../sass/components/_content.scss */
 .region-content #block-forum-content .views-field-uid {
   margin-right: 1%;
 }
-/* line 109, ../sass/components/_content.scss */
+/* line 111, ../sass/components/_content.scss */
 .region-content #block-forum-content span.views-label.views-label-view-node {
   margin: 0 20px;
 }
 
-/* line 113, ../sass/components/_content.scss */
+/* line 115, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 {
   /*Spacing for video teasers*/
 }
-/* line 114, ../sass/components/_content.scss */
+/* line 116, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 > h2.title {
   text-align: center;
   text-transform: uppercase;
@@ -155,15 +156,15 @@
   padding-bottom: 7px;
   padding-top: 7px;
 }
-/* line 126, ../sass/components/_content.scss */
+/* line 128, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 h2.node__title.title {
   border-bottom: none;
 }
-/* line 130, ../sass/components/_content.scss */
+/* line 132, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 .views-row.clearfix {
   display: flex;
 }
-/* line 133, ../sass/components/_content.scss */
+/* line 135, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 .views-col.col-2 {
   margin-left: 5%;
 }

@@ -63,3 +63,4 @@ Thumbs.db
 
 #Custom
 vendor/drupal/coder
+sites/default/config/forum.settings.yml

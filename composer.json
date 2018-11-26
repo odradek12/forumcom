@@ -11,7 +11,9 @@
         "drupal/panels": "^4.3",
         "drupal/paragraphs": "^1.5",
         "drupal/admin_toolbar": "^1.24",
-        "drupal/page_manager": "^4.0@beta"
+        "drupal/page_manager": "^4.0@beta",
+        "drupal/superfish": "^1.2",
+        "drupal/simple_menu_icons": "^2.1"
     },
     "replace": {
         "drupal/core": "^8.6"
@@ -45,7 +47,8 @@
             "themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"],
             "modules/custom/{$name}": ["type:drupal-custom-module"],
-            "themes/custom/{$name}": ["type:drupal-custom-theme"]
+            "themes/custom/{$name}": ["type:drupal-custom-theme"],
+	    "web/libraries/{$name}": ["type:drupal-library"]
         }
     },
     "autoload": {
