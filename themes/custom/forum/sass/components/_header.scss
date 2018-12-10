@@ -5,11 +5,16 @@
 #main-navigation ul.menu li a {
 	color: #000;
 }
+/*Widens header to match main space*/
+#header .container {
+	padding-left:0;
+	padding-right: 0;
+}
 /*Orients the header*/
 .region-navigation {
 	display: flex;
 	#block-newnavigation {
-		flex: 0;
+		flex: 0 35%;
 	}
 	/*Positions logo horizontally*/
 	nav#block-forum-main-menu{

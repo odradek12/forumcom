@@ -12,6 +12,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: Highlight
+      label: Highlight
+    -
       value: Featured
       label: Featured
     -
