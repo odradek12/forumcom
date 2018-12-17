@@ -1,0 +1,14 @@
+uuid: 7c214d16-09b2-40bf-b095-59cd217152c1
+langcode: en
+status: true
+dependencies: {  }
+name: article_
+label: 'Article Thumbnail'
+effects:
+  fce86ae0-fc5a-42cc-b678-2ebe7f92ef8d:
+    uuid: fce86ae0-fc5a-42cc-b678-2ebe7f92ef8d
+    id: image_resize
+    weight: 2
+    data:
+      width: 200
+      height: 133

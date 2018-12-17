@@ -15,10 +15,7 @@ label: 'Author Date Info'
 description: ''
 required: false
 translatable: false
-default_value:
-  -
-    value: asdf
-    format: basic_html
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: text

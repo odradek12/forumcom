@@ -1,0 +1,24 @@
+uuid: 5d784c75-80bb-47ea-a927-76aedebe393d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sidebar_ads
+  module:
+    - views
+  theme:
+    - forum
+id: views_block__sidebar_ads_block_1
+theme: forum
+region: sidebar_second
+weight: -11
+provider: null
+plugin: 'views_block:sidebar_ads-block_1'
+settings:
+  id: 'views_block:sidebar_ads-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

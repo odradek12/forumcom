@@ -1,49 +1,61 @@
-/* line 3, ../sass/components/_content.scss */
+/*Changes pertinent links blue*/
+/* line 5, ../sass/components/_content.scss */
+.content a {
+  color: #337ab7;
+}
+
+/*Changes links that were blue back to black*/
+/* line 9, ../sass/components/_content.scss */
+.node-content a {
+  color: black;
+}
+
+/* line 12, ../sass/components/_content.scss */
 .region-content {
   display: flex;
   flex-wrap: wrap;
 }
 
 /*Sidebar width constraints*/
-/* line 8, ../sass/components/_content.scss */
+/* line 17, ../sass/components/_content.scss */
 #block-views-block-article-feed-block-1 {
   flex: 1 1 30%;
 }
 
 /*Featured article width constraints*/
-/* line 12, ../sass/components/_content.scss */
+/* line 21, ../sass/components/_content.scss */
 #block-forum-content {
   flex: 1 1 70%;
   padding-left: 3%;
 }
 
-/* line 16, ../sass/components/_content.scss */
+/* line 25, ../sass/components/_content.scss */
 #main-content > .row {
   display: flex;
 }
-/* line 18, ../sass/components/_content.scss */
+/* line 27, ../sass/components/_content.scss */
 #main-content > .row .col-md-8 {
   flex: 1 1 80%;
 }
-/* line 21, ../sass/components/_content.scss */
+/* line 30, ../sass/components/_content.scss */
 #main-content > .row .col-md-4 {
-  max-width: 20%;
+  max-width: 250px;
 }
 
-/* line 26, ../sass/components/_content.scss */
+/* line 35, ../sass/components/_content.scss */
 .node--type-video > .node-content {
   display: flex;
   flex-direction: column-reverse;
 }
 
 /*Widens highlighted area to outer container width*/
-/* line 31, ../sass/components/_content.scss */
+/* line 40, ../sass/components/_content.scss */
 #page-intro-inside {
   margin: 0 -20px;
 }
 
 /*Highlighted article*/
-/* line 35, ../sass/components/_content.scss */
+/* line 44, ../sass/components/_content.scss */
 .region-page-intro div#block-views-block-highlight-block-1 {
   /*Apply flex to article*/
     /*.views-row{
@@ -56,15 +68,15 @@
   /*Styling article title*/
   /*Article subtitle*/
 }
-/* line 42, ../sass/components/_content.scss */
+/* line 51, ../sass/components/_content.scss */
 .region-page-intro div#block-views-block-highlight-block-1 .views-field-field-image {
   max-width: 60%;
 }
-/* line 44, ../sass/components/_content.scss */
+/* line 53, ../sass/components/_content.scss */
 .region-page-intro div#block-views-block-highlight-block-1 .views-field-field-image a.image-popup.overlayed {
   margin-right: 20px;
 }
-/* line 52, ../sass/components/_content.scss */
+/* line 61, ../sass/components/_content.scss */
 .region-page-intro div#block-views-block-highlight-block-1 .views-field-title .field-content a {
   color: black;
   /*font-weight: 600;*/
@@ -72,40 +84,41 @@
   font-size: 24px;
   text-transform: uppercase;
 }
-/* line 60, ../sass/components/_content.scss */
+/* line 69, ../sass/components/_content.scss */
 .region-page-intro div#block-views-block-highlight-block-1 .views-field-body {
   margin-top: 1%;
   margin-bottom: 1%;
 }
-/* line 64, ../sass/components/_content.scss */
+/* line 73, ../sass/components/_content.scss */
 .region-page-intro div#block-views-block-highlight-block-1 .views-field-uid {
   margin-right: 1%;
+  float: left;
 }
-/* line 67, ../sass/components/_content.scss */
+/* line 77, ../sass/components/_content.scss */
 .region-page-intro div#block-views-block-highlight-block-1 span.views-label.views-label-view-node {
   margin: 0 20px;
 }
 
 /*Featured article images fill space*/
 @media (min-width: 600px) {
-  /* line 73, ../sass/components/_content.scss */
+  /* line 83, ../sass/components/_content.scss */
   .container {
     padding-left: 25px;
     padding-right: 25px;
   }
 
-  /* line 77, ../sass/components/_content.scss */
+  /* line 87, ../sass/components/_content.scss */
   .field--name-field-image {
     margin-left: 0 !important;
     max-width: 100% !important;
   }
 }
 /*Minimize sizes of sidebar articles*/
-/* line 84, ../sass/components/_content.scss */
+/* line 94, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 {
   /*Resizes first article's thumbnail to parent container's width*/
 }
-/* line 85, ../sass/components/_content.scss */
+/* line 95, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 > h2.title {
   text-align: center;
   text-transform: uppercase;
@@ -116,58 +129,58 @@
   padding-bottom: 7px;
   padding-top: 7px;
 }
-/* line 95, ../sass/components/_content.scss */
+/* line 105, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 h2.node__title.title {
   font-size: 16px;
   text-transform: none;
   border-bottom: none;
 }
-/* line 101, ../sass/components/_content.scss */
+/* line 111, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 a.image-popup.overlayed, .region-content #block-views-block-article-feed-block-1 img.image-style-article-standard {
   width: 100%;
 }
-/* line 104, ../sass/components/_content.scss */
+/* line 114, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row {
   border-bottom: 1px solid lightgrey;
 }
-/* line 107, ../sass/components/_content.scss */
+/* line 117, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) {
   margin-top: 25px;
 }
-/* line 110, ../sass/components/_content.scss */
+/* line 120, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content {
   display: flex;
   flex-direction: wrap;
   /*Proportion thumbnail size*/
   /*Align header top with thumbnail top*/
 }
-/* line 114, ../sass/components/_content.scss */
+/* line 124, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content .teaser-image-wrapper {
   flex: 1 0 30%;
 }
-/* line 118, ../sass/components/_content.scss */
+/* line 128, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content h2.node__title.title {
   margin-top: -4px;
   margin-left: 10px;
 }
 
 /*Featured articles*/
-/* line 126, ../sass/components/_content.scss */
+/* line 136, ../sass/components/_content.scss */
 .region-content #block-forum-content {
   /*Apply flex to article*/
   /*Styling article title*/
   /*Article subtitle*/
 }
-/* line 128, ../sass/components/_content.scss */
+/* line 138, ../sass/components/_content.scss */
 .region-content #block-forum-content .views-row {
   display: flex;
   flex-wrap: wrap;
 }
-/* line 132, ../sass/components/_content.scss */
+/* line 142, ../sass/components/_content.scss */
 .region-content #block-forum-content .with-image {
   margin-right: 0;
 }
-/* line 136, ../sass/components/_content.scss */
+/* line 146, ../sass/components/_content.scss */
 .region-content #block-forum-content .views-field-title .field-content a {
   color: black;
   /*font-weight: 600;*/
@@ -175,25 +188,26 @@
   font-size: 24px;
   text-transform: uppercase;
 }
-/* line 144, ../sass/components/_content.scss */
+/* line 154, ../sass/components/_content.scss */
 .region-content #block-forum-content .views-field-body {
   margin-top: 1%;
   margin-bottom: 1%;
 }
-/* line 148, ../sass/components/_content.scss */
+/* line 158, ../sass/components/_content.scss */
 .region-content #block-forum-content .views-field-uid {
   margin-right: 1%;
 }
-/* line 151, ../sass/components/_content.scss */
+/* line 161, ../sass/components/_content.scss */
 .region-content #block-forum-content span.views-label.views-label-view-node {
   margin: 0 20px;
 }
 
-/* line 155, ../sass/components/_content.scss */
+/*Top Videos*/
+/* line 166, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 {
   /*Spacing for video teasers*/
 }
-/* line 156, ../sass/components/_content.scss */
+/* line 167, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 > h2.title {
   text-align: center;
   text-transform: uppercase;
@@ -206,17 +220,114 @@
   padding-bottom: 7px;
   padding-top: 7px;
 }
-/* line 168, ../sass/components/_content.scss */
+/* line 179, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 h2.node__title.title {
   border-bottom: none;
 }
-/* line 172, ../sass/components/_content.scss */
+/* line 183, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 .views-row.clearfix {
   display: flex;
 }
-/* line 175, ../sass/components/_content.scss */
+/* line 186, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 .views-col.col-2 {
   margin-left: 5%;
+}
+
+/*More News*/
+/* line 191, ../sass/components/_content.scss */
+.region-content #block-views-block-more-news-block-1 {
+  /*Apply flex to article*/
+    /*.views-row{
+    	display: flex;
+	    flex-wrap: wrap;
+	}*/
+  /*.with-image {
+  	margin-right: 0; 
+  }*/
+  /*Styling article title*/
+  /*Article subtitle*/
+}
+/* line 192, ../sass/components/_content.scss */
+.region-content #block-views-block-more-news-block-1 > h2.title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #3399ff;
+  border-bottom: none;
+  margin-top: 0;
+  margin-left: 35%;
+  margin-right: 35%;
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+/* line 212, ../sass/components/_content.scss */
+.region-content #block-views-block-more-news-block-1 .view-content {
+  display: flex;
+  flex-direction: column;
+}
+/* line 216, ../sass/components/_content.scss */
+.region-content #block-views-block-more-news-block-1 .views-row {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid lightgrey;
+}
+/* line 221, ../sass/components/_content.scss */
+.region-content #block-views-block-more-news-block-1 a.image-popup.overlayed {
+  margin-right: 3%;
+}
+/* line 225, ../sass/components/_content.scss */
+.region-content #block-views-block-more-news-block-1 .views-field-title .field-content a {
+  color: black;
+  font-weight: 600;
+  font-size: 24px;
+}
+/* line 231, ../sass/components/_content.scss */
+.region-content #block-views-block-more-news-block-1 .views-field-body {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+/* line 235, ../sass/components/_content.scss */
+.region-content #block-views-block-more-news-block-1 .views-field-uid {
+  margin-right: 1%;
+  float: left;
+}
+/* line 239, ../sass/components/_content.scss */
+.region-content #block-views-block-more-news-block-1 .views-field-last-updated {
+  float: left;
+}
+/* line 242, ../sass/components/_content.scss */
+.region-content #block-views-block-more-news-block-1 span.views-label.views-label-view-node {
+  margin: 0 20px;
+}
+
+/*Sidebar ads*/
+/* line 248, ../sass/components/_content.scss */
+.block-views-blocksidebar-ads-block-1 .view-content .views-row:not(:first-child) {
+  margin-top: 10px;
+}
+
+/*Lanscape ad (first)*/
+/* line 253, ../sass/components/_content.scss */
+.views-field-field-landscape-image .field-content {
+  display: flex;
+}
+
+/* line 256, ../sass/components/_content.scss */
+img.image-style-landscape-ad {
+  margin: auto;
+}
+
+/* line 259, ../sass/components/_content.scss */
+div#top-content {
+  background-color: #f3f3f3;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+
+/*Centering Landscape Ad 2*/
+/* line 265, ../sass/components/_content.scss */
+div#block-views-block-landscape-ad-2-block-1 {
+  margin: 0 auto;
 }
 
 /* line 1, ../sass/components/_footer.scss */

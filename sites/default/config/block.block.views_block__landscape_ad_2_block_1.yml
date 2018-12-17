@@ -1,0 +1,24 @@
+uuid: 813e5abc-2342-422a-b7d4-f710ee5d106c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.landscape_ad_2
+  module:
+    - views
+  theme:
+    - forum
+id: views_block__landscape_ad_2_block_1
+theme: forum
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:landscape_ad_2-block_1'
+settings:
+  id: 'views_block:landscape_ad_2-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

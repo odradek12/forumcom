@@ -1,0 +1,17 @@
+uuid: cb48cf18-643d-4e0e-a046-bdf6ab3ba59b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Landscape Ad'
+type: landscape_ad
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

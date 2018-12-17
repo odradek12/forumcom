@@ -1,25 +1,25 @@
-uuid: b4278432-0da7-4f7f-82f8-1d9ca820d572
+uuid: 036a8207-f397-43fd-85a8-6c5aa37e3eb8
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.videos
+    - views.view.landscape_ad
   module:
     - system
     - views
   theme:
     - forum
-id: views_block__videos_block_1
+id: views_block__landscape_ad_block_1
 theme: forum
-region: content
-weight: -2
+region: top_content
+weight: -11
 provider: null
-plugin: 'views_block:videos-block_1'
+plugin: 'views_block:landscape_ad-block_1'
 settings:
-  id: 'views_block:videos-block_1'
+  id: 'views_block:landscape_ad-block_1'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility:

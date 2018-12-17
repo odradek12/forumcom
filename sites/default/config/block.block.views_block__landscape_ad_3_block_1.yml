@@ -1,0 +1,24 @@
+uuid: d0382ec2-e188-4005-bedd-c796c83b7452
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.landscape_ad_3
+  module:
+    - views
+  theme:
+    - forum
+id: views_block__landscape_ad_3_block_1
+theme: forum
+region: footer_first
+weight: -13
+provider: null
+plugin: 'views_block:landscape_ad_3-block_1'
+settings:
+  id: 'views_block:landscape_ad_3-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

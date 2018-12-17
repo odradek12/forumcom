@@ -20,6 +20,9 @@ settings:
     -
       value: Sidebar
       label: Sidebar
+    -
+      value: 'More News'
+      label: 'More News'
   allowed_values_function: ''
 module: options
 locked: false

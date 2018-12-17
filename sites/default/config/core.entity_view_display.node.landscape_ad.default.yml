@@ -1,0 +1,28 @@
+uuid: f783b782-cc0d-42c5-8d38-ec126b0d2801
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landscape_ad.body
+    - field.field.node.landscape_ad.field_landscape_image
+    - node.type.landscape_ad
+  module:
+    - image
+    - user
+id: node.landscape_ad.default
+targetEntityType: node
+bundle: landscape_ad
+mode: default
+content:
+  field_landscape_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  body: true
+  links: true

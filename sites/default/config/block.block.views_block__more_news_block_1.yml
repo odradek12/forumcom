@@ -1,0 +1,24 @@
+uuid: c5d6b680-842c-46d6-ac05-32e13ee52740
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.more_news
+  module:
+    - views
+  theme:
+    - forum
+id: views_block__more_news_block_1
+theme: forum
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:more_news-block_1'
+settings:
+  id: 'views_block:more_news-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: 5f990ff4-ed1d-41dd-b9ed-caac1cc78b95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ad.body
+    - field.field.node.ad.field_ad_image
+    - image.style.large
+    - node.type.ad
+  module:
+    - image
+    - user
+id: node.ad.default
+targetEntityType: node
+bundle: ad
+mode: default
+content:
+  field_ad_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  body: true
+  links: true

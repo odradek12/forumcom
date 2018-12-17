@@ -1,0 +1,15 @@
+uuid: b5938c4d-0b7c-4fb3-a50b-609ad1a7b766
+langcode: en
+status: true
+dependencies: {  }
+name: landscape_ad
+label: 'Landscape Ad'
+effects:
+  6c1886f6-d2e1-46e4-8d81-39c25e3af4f7:
+    uuid: 6c1886f6-d2e1-46e4-8d81-39c25e3af4f7
+    id: image_scale
+    weight: 2
+    data:
+      width: 550
+      height: 130
+      upscale: true

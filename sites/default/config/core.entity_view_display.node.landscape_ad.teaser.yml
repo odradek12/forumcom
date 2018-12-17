@@ -1,0 +1,30 @@
+uuid: a65744a4-dd3d-4b10-9115-e5dd2c643c79
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landscape_ad.body
+    - node.type.landscape_ad
+  module:
+    - text
+    - user
+id: node.landscape_ad.teaser
+targetEntityType: node
+bundle: landscape_ad
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

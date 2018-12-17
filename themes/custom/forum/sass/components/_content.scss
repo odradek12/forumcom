@@ -1,5 +1,14 @@
 $headercolor1:#3399ff;
+$linkcolor:#337ab7;
 
+/*Changes pertinent links blue*/
+.content a{
+	color:#337ab7;
+}
+/*Changes links that were blue back to black*/
+.node-content a{
+	color:black;
+}
 .region-content {
 	display: flex;
 	flex-wrap: wrap;
@@ -19,7 +28,7 @@ $headercolor1:#3399ff;
 		flex: 1 1 80%;
 	}
 	.col-md-4 {
-		max-width:20%;
+		max-width: 250px;
 	}
 }
 
@@ -63,6 +72,7 @@ $headercolor1:#3399ff;
 	}
 	.views-field-uid {
 		margin-right: 1%;
+		float: left;
 	}
 	span.views-label.views-label-view-node {
 		margin: 0 20px;
@@ -152,6 +162,7 @@ $headercolor1:#3399ff;
 		margin: 0 20px;
 	}
 }
+/*Top Videos*/
 .region-content #block-views-block-videos-block-1 {
 	> h2.title {
 		text-align: center;
@@ -175,4 +186,82 @@ $headercolor1:#3399ff;
 	.views-col.col-2 {
 	    margin-left: 5%;
 	}
+}
+/*More News*/
+.region-content #block-views-block-more-news-block-1{
+	> h2.title {
+		text-align: center;
+		text-transform: uppercase;
+		color:  #ffffff;
+		background-color: $headercolor1;
+		border-bottom: none;
+		margin-top: 0;
+		margin-left: 35%;
+		margin-right: 35%;
+		padding-bottom: 7px;
+		padding-top: 7px;
+	}
+	/*Apply flex to article*/
+    /*.views-row{
+    	display: flex;
+	    flex-wrap: wrap;
+	}*/
+	/*.with-image {
+		margin-right: 0; 
+	}*/
+	.view-content {
+		display: flex;
+		flex-direction: column;
+	}
+	.views-row {
+		padding-top: 32px;
+   		padding-bottom: 32px;
+	    border-bottom: 1px solid lightgrey;
+	}
+	a.image-popup.overlayed {
+	    margin-right: 3%;
+	}
+	/*Styling article title*/
+	.views-field-title .field-content a{
+		color: black;
+	    font-weight: 600;
+	    font-size: 24px;
+	}
+	/*Article subtitle*/
+	.views-field-body{
+		margin-top: 1%;
+		margin-bottom: 1%;
+	}
+	.views-field-uid {
+		margin-right: 1%;
+		float: left;
+	}
+	.views-field-last-updated {
+		float: left;
+	}
+	span.views-label.views-label-view-node {
+		margin: 0 20px;
+	}
+}
+/*Sidebar ads*/
+.block-views-blocksidebar-ads-block-1 {
+	.view-content .views-row:not(:first-child) {
+		margin-top: 10px;
+	}
+}
+/*Lanscape ad (first)*/
+.views-field-field-landscape-image .field-content {
+    display: flex;
+}
+img.image-style-landscape-ad {
+    margin: auto;
+}
+div#top-content {
+    background-color: #f3f3f3;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+/*Centering Landscape Ad 2*/
+div#block-views-block-landscape-ad-2-block-1 {
+    margin: 0 auto;
 }

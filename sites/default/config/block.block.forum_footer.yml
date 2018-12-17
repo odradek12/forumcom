@@ -12,8 +12,8 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: forum_footer
 theme: forum
-region: footer_second
-weight: -6
+region: footer_third
+weight: -12
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
