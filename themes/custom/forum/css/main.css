@@ -330,6 +330,16 @@ div#block-views-block-landscape-ad-2-block-1 {
   margin: 0 auto;
 }
 
+/*Centering Landscape Ad 3*/
+/* line 270, ../sass/components/_content.scss */
+div#block-views-block-landscape-ad-3-block-1-2 .field-content {
+  display: flex;
+}
+/* line 272, ../sass/components/_content.scss */
+div#block-views-block-landscape-ad-3-block-1-2 .field-content img {
+  margin: auto;
+}
+
 /* line 1, ../sass/components/_footer.scss */
 #footer {
   background-color: #000;

@@ -23,6 +23,7 @@ regions:
   content: 'Content'
   sidebar_first: 'First Sidebar'
   sidebar_second: 'Second Sidebar'
+  end_banner: 'End Banner'
   footer_first: 'Footer First'
   footer_second: 'Footer Second'
   footer_third: 'Footer Third'

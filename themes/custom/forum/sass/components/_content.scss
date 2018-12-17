@@ -243,7 +243,7 @@ $linkcolor:#337ab7;
 		margin: 0 20px;
 	}
 }
-/*Sidebar ads*/
+/*Sidebar ads*/ 
 .block-views-blocksidebar-ads-block-1 {
 	.view-content .views-row:not(:first-child) {
 		margin-top: 10px;
@@ -264,4 +264,13 @@ div#top-content {
 /*Centering Landscape Ad 2*/
 div#block-views-block-landscape-ad-2-block-1 {
     margin: 0 auto;
+}
+/*Centering Landscape Ad 3*/
+div#block-views-block-landscape-ad-3-block-1-2{
+	.field-content{
+		display: flex;
+		img {
+			margin: auto;
+		}
+	}
 }
