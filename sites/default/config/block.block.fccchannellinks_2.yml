@@ -1,0 +1,24 @@
+uuid: 5505d418-e1b2-4e12-b0e1-7514b2905be7
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.fcc-channel-links
+  module:
+    - system
+  theme:
+    - forum
+id: fccchannellinks_2
+theme: forum
+region: pre_header_left
+weight: 0
+provider: null
+plugin: 'system_menu_block:fcc-channel-links'
+settings:
+  id: 'system_menu_block:fcc-channel-links'
+  label: 'FCC Channel Links'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

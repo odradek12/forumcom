@@ -1,6 +1,6 @@
-uuid: d0382ec2-e188-4005-bedd-c796c83b7452
+uuid: b886ee0c-a0f0-47f0-a147-95773623b54f
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.landscape_ad_3
@@ -8,17 +8,17 @@ dependencies:
     - views
   theme:
     - forum
-id: views_block__landscape_ad_3_block_1
+id: views_block__landscape_ad_3_block_1_2
 theme: forum
-region: pre_header_left
-weight: -12
+region: end_banner
+weight: 0
 provider: null
 plugin: 'views_block:landscape_ad_3-block_1'
 settings:
   id: 'views_block:landscape_ad_3-block_1'
   label: ''
   provider: views
-  label_display: '0'
+  label_display: visible
   views_label: ''
   items_per_page: none
 visibility: {  }
