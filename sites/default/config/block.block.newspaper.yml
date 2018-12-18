@@ -1,0 +1,24 @@
+uuid: 45f344b1-1b9a-4ac4-b0ad-c3eab062bd68
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-column-2
+  module:
+    - system
+  theme:
+    - forum
+id: newspaper
+theme: forum
+region: footer_first
+weight: -12
+provider: null
+plugin: 'system_menu_block:footer-column-2'
+settings:
+  id: 'system_menu_block:footer-column-2'
+  label: Newspaper
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

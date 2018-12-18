@@ -1,6 +1,6 @@
 uuid: 1e41d4c6-5af6-40c2-b3a7-6e61c9ecb80f
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: forum_branding
 theme: forum
-region: footer_second
-weight: -13
+region: sub_footer_left
+weight: -14
 provider: null
 plugin: system_branding_block
 settings:

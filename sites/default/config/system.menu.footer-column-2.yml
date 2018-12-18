@@ -1,0 +1,8 @@
+uuid: 80fece4c-cfd4-43e9-8468-781f6f5ad564
+langcode: en
+status: true
+dependencies: {  }
+id: footer-column-2
+label: Newspaper
+description: ''
+locked: false

@@ -1,0 +1,8 @@
+uuid: 6e16fb91-5293-405a-b0ea-88bb882af857
+langcode: en
+status: true
+dependencies: {  }
+id: footer-column-1
+label: Account
+description: ''
+locked: false

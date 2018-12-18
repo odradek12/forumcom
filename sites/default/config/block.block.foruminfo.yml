@@ -1,0 +1,25 @@
+uuid: 906b308d-431d-4ccc-8021-28a115854dd6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:050caeab-cf28-4c17-a6e3-da4bc4b00f62'
+  module:
+    - block_content
+  theme:
+    - forum
+id: foruminfo
+theme: forum
+region: sub_footer_left
+weight: -15
+provider: null
+plugin: 'block_content:050caeab-cf28-4c17-a6e3-da4bc4b00f62'
+settings:
+  id: 'block_content:050caeab-cf28-4c17-a6e3-da4bc4b00f62'
+  label: 'Forum Info'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

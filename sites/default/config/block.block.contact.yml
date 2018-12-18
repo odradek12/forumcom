@@ -1,0 +1,24 @@
+uuid: 55e4a752-219d-4211-bc40-bc0bd349453a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-column-23
+  module:
+    - system
+  theme:
+    - forum
+id: contact
+theme: forum
+region: footer_first
+weight: -13
+provider: null
+plugin: 'system_menu_block:footer-column-23'
+settings:
+  id: 'system_menu_block:footer-column-23'
+  label: Contact
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

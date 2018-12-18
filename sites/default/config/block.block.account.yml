@@ -1,0 +1,24 @@
+uuid: 2e92040b-e42e-475d-acc0-df1228f6e5cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-column-1
+  module:
+    - system
+  theme:
+    - forum
+id: account
+theme: forum
+region: footer_first
+weight: -14
+provider: null
+plugin: 'system_menu_block:footer-column-1'
+settings:
+  id: 'system_menu_block:footer-column-1'
+  label: Account
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

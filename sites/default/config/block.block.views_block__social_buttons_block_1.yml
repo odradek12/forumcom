@@ -1,0 +1,24 @@
+uuid: 73667fb8-9bed-45c6-90c2-c3b2f1337f2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.social_buttons
+  module:
+    - views
+  theme:
+    - forum
+id: views_block__social_buttons_block_1
+theme: forum
+region: footer_second
+weight: 0
+provider: null
+plugin: 'views_block:social_buttons-block_1'
+settings:
+  id: 'views_block:social_buttons-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

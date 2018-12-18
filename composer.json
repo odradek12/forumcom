@@ -14,7 +14,8 @@
         "drupal/page_manager": "^4.0@beta",
         "drupal/superfish": "^1.2",
         "drupal/simple_menu_icons": "^2.1",
-        "drupal/live_weather": "^1.2"
+        "drupal/live_weather": "^1.2",
+        "drupal/addtoany": "^1.10"
     },
     "replace": {
         "drupal/core": "^8.6"

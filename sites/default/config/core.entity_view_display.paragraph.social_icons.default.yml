@@ -1,0 +1,17 @@
+uuid: 439271a0-9cf4-45bc-bf6a-ef46f3148ad1
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.social_icons
+id: paragraph.social_icons.default
+targetEntityType: paragraph
+bundle: social_icons
+mode: default
+content:
+  addtoany:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

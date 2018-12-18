@@ -1,0 +1,24 @@
+uuid: 484f85df-2a75-4dac-9532-97d37354a155
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-column-4
+  module:
+    - system
+  theme:
+    - forum
+id: more
+theme: forum
+region: footer_first
+weight: -11
+provider: null
+plugin: 'system_menu_block:footer-column-4'
+settings:
+  id: 'system_menu_block:footer-column-4'
+  label: More
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

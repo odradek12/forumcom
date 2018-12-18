@@ -1,3 +1,42 @@
 #footer {
 	background-color:#000;
+	.col-sm-6 {
+		width:100%; 
+	}
+	.row {
+	    display: flex;
+	    flex-direction: column;
+	}
+	.col-sm-4 {
+	    width: 100%;
+	}
+	 h2, ul.menu li a {
+	    	color: white;
+	    }
+	.region.region-footer-first {
+	    display: flex;
+	    justify-content: space-between;
+	    
+	    ul.menu li a {
+	    	margin-left: -25px;
+	    }
+	} 
+}
+#subfooter {
+	color: white;
+	background-color: black;
+}
+/*Perfectly center Forum info block*/
+#subfooter-inside .row {
+  	display:flex;
+  	p {
+  		text-align: center;
+  	}
+}
+.col-md-4 {
+	width: auto;
+    margin: auto;
+}
+.col-md-8 {
+	flex: 0;
 }

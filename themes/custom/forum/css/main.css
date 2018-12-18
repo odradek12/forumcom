@@ -344,6 +344,59 @@ div#block-views-block-landscape-ad-3-block-1-2 .field-content img {
 #footer {
   background-color: #000;
 }
+/* line 3, ../sass/components/_footer.scss */
+#footer .col-sm-6 {
+  width: 100%;
+}
+/* line 6, ../sass/components/_footer.scss */
+#footer .row {
+  display: flex;
+  flex-direction: column;
+}
+/* line 10, ../sass/components/_footer.scss */
+#footer .col-sm-4 {
+  width: 100%;
+}
+/* line 13, ../sass/components/_footer.scss */
+#footer h2, #footer ul.menu li a {
+  color: white;
+}
+/* line 16, ../sass/components/_footer.scss */
+#footer .region.region-footer-first {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 20, ../sass/components/_footer.scss */
+#footer .region.region-footer-first ul.menu li a {
+  margin-left: -25px;
+}
+
+/* line 25, ../sass/components/_footer.scss */
+#subfooter {
+  color: white;
+  background-color: black;
+}
+
+/*Perfectly center Forum info block*/
+/* line 30, ../sass/components/_footer.scss */
+#subfooter-inside .row {
+  display: flex;
+}
+/* line 32, ../sass/components/_footer.scss */
+#subfooter-inside .row p {
+  text-align: center;
+}
+
+/* line 36, ../sass/components/_footer.scss */
+.col-md-4 {
+  width: auto;
+  margin: auto;
+}
+
+/* line 40, ../sass/components/_footer.scss */
+.col-md-8 {
+  flex: 0;
+}
 
 /* line 1, ../sass/components/_header.scss */
 #header {
