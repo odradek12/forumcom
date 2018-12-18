@@ -1,5 +1,6 @@
 #footer {
 	background-color:#000;
+	border-bottom: none;
 	.col-sm-6 {
 		width:100%; 
 	}
@@ -25,6 +26,9 @@
 #subfooter {
 	color: white;
 	background-color: black;
+}
+#subfooter-inside {
+	border-top: 1px solid #dadada;
 }
 /*Perfectly center Forum info block*/
 #subfooter-inside .row {

@@ -1,6 +1,8 @@
 #header {
 	background-color:#f3f3f3;
 	border-bottom: none;
+	height: 55px;
+    padding-top: 3px;
 }
 #main-navigation ul.menu li a {
 	color: #000;
@@ -40,8 +42,13 @@
 		    	display: none;
 		    }
 		    .image{
-	    	    margin-top: -7px;
+	    	    margin-top: -12px;
 		    }
+		}
+		.temperature {
+			line-height: 1;
+			font-size:12px;
+		    padding-top: 5px;
 		}
 	 }
 	 div#block-fccchannellinks {
@@ -50,13 +57,21 @@
 }
 /*Replace "Home" menu with hamburger menu*/
 ul#superfish-new-navigation.hamburger-test {
-	background-image: url("/sites/default/files/2018-11/hamburger_icon.png");
+	/*background-image: url("/sites/default/files/2018-11/hamburger_icon.png");
 	background-size: 50px;
 	background-repeat: no-repeat;
-	width:50px;
+	width:50px;*/
 	/*a:first-child {*/
 	a.is-active.sf-depth-1.menuparent {
 		visibility: hidden;
+		padding-left:0px;
+	}
+	a.is-active.sf-depth-1.menuparent:before {
+	    content: "\f0c9";
+	    font-family: "FontAwesome";
+	    font-size: 36px;
+	    position: absolute;
+	    visibility: visible;
 	}	
 }
 /*Aligns menu items with hamburger button*/
