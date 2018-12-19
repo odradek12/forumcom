@@ -375,62 +375,87 @@ div#block-views-block-landscape-ad-3-block-1-2 .field-content img {
 #footer {
   background-color: #000;
   border-bottom: none;
+  padding-top: 20px;
+  padding-bottom: 0;
+  /*Justify social buttons*/
 }
-/* line 4, ../sass/components/_footer.scss */
+/* line 6, ../sass/components/_footer.scss */
 #footer .col-sm-6 {
   width: 100%;
 }
-/* line 7, ../sass/components/_footer.scss */
+/* line 9, ../sass/components/_footer.scss */
 #footer .row {
   display: flex;
   flex-direction: column;
+  width: 85%;
 }
-/* line 11, ../sass/components/_footer.scss */
+/* line 14, ../sass/components/_footer.scss */
 #footer .col-sm-4 {
   width: 100%;
 }
-/* line 14, ../sass/components/_footer.scss */
+/* line 17, ../sass/components/_footer.scss */
 #footer h2, #footer ul.menu li a {
+  font-weight: 600;
   color: white;
 }
-/* line 17, ../sass/components/_footer.scss */
+/* line 21, ../sass/components/_footer.scss */
 #footer .region.region-footer-first {
   display: flex;
   justify-content: space-between;
 }
-/* line 21, ../sass/components/_footer.scss */
+/* line 25, ../sass/components/_footer.scss */
 #footer .region.region-footer-first ul.menu li a {
-  margin-left: -25px;
+  margin-left: -10px;
+  padding: 10px 5px 5px 10px;
+}
+/* line 30, ../sass/components/_footer.scss */
+#footer .block-menu {
+  padding: 0;
+}
+/* line 33, ../sass/components/_footer.scss */
+#footer #block-views-block-social-buttons-block-1 {
+  top: -20px;
+  padding-bottom: 0;
+}
+/* line 36, ../sass/components/_footer.scss */
+#footer #block-views-block-social-buttons-block-1 h2.title {
+  margin-bottom: 10px;
+}
+/* line 41, ../sass/components/_footer.scss */
+#footer span.a2a_kit.a2a_kit_size_32.addtoany_list {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* line 26, ../sass/components/_footer.scss */
+/* line 47, ../sass/components/_footer.scss */
 #subfooter {
   color: white;
   background-color: black;
 }
 
-/* line 30, ../sass/components/_footer.scss */
+/* line 51, ../sass/components/_footer.scss */
 #subfooter-inside {
   border-top: 1px solid #dadada;
 }
 
 /*Perfectly center Forum info block*/
-/* line 34, ../sass/components/_footer.scss */
+/* line 55, ../sass/components/_footer.scss */
 #subfooter-inside .row {
   display: flex;
 }
-/* line 36, ../sass/components/_footer.scss */
+/* line 57, ../sass/components/_footer.scss */
 #subfooter-inside .row p {
   text-align: center;
 }
 
-/* line 40, ../sass/components/_footer.scss */
+/* line 61, ../sass/components/_footer.scss */
 .col-md-4 {
   width: auto;
   margin: auto;
 }
 
-/* line 44, ../sass/components/_footer.scss */
+/* line 65, ../sass/components/_footer.scss */
 .col-md-8 {
   flex: 0;
 }
@@ -540,3 +565,12 @@ ul.sf-menu.sf-vertical li.sfHover > ul {
 }
 
 /*}*/
+/*==========*/
+/*Responsive*/
+/*==========*/
+@media (max-width: 991px) and (min-width: 768px) {
+  /* line 89, ../sass/components/_header.scss */
+  .region-navigation .menu-item, body:not(:target) .region-navigation .menu-item, .region-navigation .menu .menu-item a:hover {
+    background-color: transparent;
+  }
+}
