@@ -85,8 +85,23 @@ ul#superfish-new-navigation.hamburger-test {
 /*Responsive*/
 /*==========*/
 
+
+body:not(:target) .region-navigation .menu-toggle-target-show:target ~ .menu-toggle--hide {
+    display: none;
+}
+
 @media (max-width: 991px) and (min-width: 768px) {
 	.region-navigation .menu-item, body:not(:target) .region-navigation .menu-item, .region-navigation .menu .menu-item a:hover {
 	    background-color: transparent;
 	}
+}
+@media (max-width: 991px) {
+	.region-navigation div#block-liveweatherblock {
+		display: none;
+	}
+}
+@media (max-width: 768px) {
+	/*body:not(:target) .region-navigation .menu-toggle-target-show:target ~ .menu-toggle--hide {
+	    display: none;
+	}*/
 }

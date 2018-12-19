@@ -109,6 +109,7 @@ $linkcolor:#337ab7;
 
 /*Minimize sizes of sidebar articles*/
 .region-content #block-views-block-article-feed-block-1 {
+	order: 10;
 	> h2.title {
 		text-align: center;
 		text-transform: uppercase;
@@ -151,6 +152,7 @@ $linkcolor:#337ab7;
 }
 /*Featured articles*/
 .region-content #block-forum-content{
+	order: 20;
 	/*Apply flex to article*/
 	.view-frontpage .views-row {
 		border-bottom: none;
@@ -184,6 +186,7 @@ $linkcolor:#337ab7;
 }
 /*Top Videos*/
 .region-content #block-views-block-videos-block-1 {
+	order: 30;
 	> h2.title {
 		text-align: center;
 		text-transform: uppercase;
@@ -209,6 +212,7 @@ $linkcolor:#337ab7;
 }
 /*More News*/
 .region-content #block-views-block-more-news-block-1{
+	order: 40;
 	> h2.title {
 		text-align: center;
 		text-transform: uppercase;
@@ -284,6 +288,7 @@ div#top-content {
 }
 /*Centering Landscape Ad 2*/
 div#block-views-block-landscape-ad-2-block-1 {
+	order: 35;
     margin: 0 auto;
 }
 /*Centering Landscape Ad 3*/
@@ -293,5 +298,27 @@ div#block-views-block-landscape-ad-3-block-1-2{
 		img {
 			margin: auto;
 		}
+	}
+}
+
+/*==========*/
+/*Responsive*/
+/*==========*/
+
+@media (max-width: 991px) {
+	#main-content {
+		.block.block-page-title-block{
+			display: none;
+		}
+		> .row .col-md-4 {
+    		max-width: 28%;
+			margin-top: 0;
+		}
+	}
+	.region-content {
+		flex-direction: column;
+	}
+	.region-content #block-views-block-article-feed-block-1 {
+		order: 25;
 	}
 }

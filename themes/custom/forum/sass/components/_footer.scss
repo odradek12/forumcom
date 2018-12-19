@@ -65,3 +65,19 @@
 .col-md-8 {
 	flex: 0;
 }
+
+/*==========*/
+/*Responsive*/
+/*==========*/
+
+@media (max-width: 768px) {
+	#footer .row {
+		width: 100%;
+		.region.region-footer-first {
+			flex-wrap: wrap;
+		}
+		.menu--footer-column-1, .menu--footer-column-2, .menu--footer-column-23, .menu--footer-column-4 {
+			flex: 1 0 50%;
+		}
+	}
+}

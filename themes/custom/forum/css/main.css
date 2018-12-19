@@ -142,9 +142,10 @@
 /*Minimize sizes of sidebar articles*/
 /* line 111, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 {
+  order: 10;
   /*Resizes first article's thumbnail to parent container's width*/
 }
-/* line 112, ../sass/components/_content.scss */
+/* line 113, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 > h2.title {
   text-align: center;
   text-transform: uppercase;
@@ -155,62 +156,63 @@
   padding-bottom: 7px;
   padding-top: 7px;
 }
-/* line 122, ../sass/components/_content.scss */
+/* line 123, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 h2.node__title.title {
   font-size: 16px;
   text-transform: none;
   border-bottom: none;
 }
-/* line 128, ../sass/components/_content.scss */
+/* line 129, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 a.image-popup.overlayed, .region-content #block-views-block-article-feed-block-1 img.image-style-article-standard {
   width: 100%;
 }
-/* line 131, ../sass/components/_content.scss */
+/* line 132, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row {
   border-bottom: 1px solid lightgrey;
 }
-/* line 134, ../sass/components/_content.scss */
+/* line 135, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) {
   margin-top: 25px;
 }
-/* line 137, ../sass/components/_content.scss */
+/* line 138, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content {
   display: flex;
   flex-direction: wrap;
   /*Proportion thumbnail size*/
   /*Align header top with thumbnail top*/
 }
-/* line 141, ../sass/components/_content.scss */
+/* line 142, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content .teaser-image-wrapper {
   flex: 1 0 30%;
 }
-/* line 145, ../sass/components/_content.scss */
+/* line 146, ../sass/components/_content.scss */
 .region-content #block-views-block-article-feed-block-1 .views-row:not(:first-child) .node-content h2.node__title.title {
   margin-top: -4px;
   margin-left: 10px;
 }
 
 /*Featured articles*/
-/* line 153, ../sass/components/_content.scss */
+/* line 154, ../sass/components/_content.scss */
 .region-content #block-forum-content {
+  order: 20;
   /*Apply flex to article*/
   /*Styling article title*/
   /*Article subtitle*/
 }
-/* line 155, ../sass/components/_content.scss */
+/* line 157, ../sass/components/_content.scss */
 .region-content #block-forum-content .view-frontpage .views-row {
   border-bottom: none;
 }
-/* line 158, ../sass/components/_content.scss */
+/* line 160, ../sass/components/_content.scss */
 .region-content #block-forum-content .views-row {
   display: flex;
   flex-wrap: wrap;
 }
-/* line 162, ../sass/components/_content.scss */
+/* line 164, ../sass/components/_content.scss */
 .region-content #block-forum-content .with-image {
   margin-right: 0;
 }
-/* line 166, ../sass/components/_content.scss */
+/* line 168, ../sass/components/_content.scss */
 .region-content #block-forum-content .views-field-title .field-content a {
   color: black;
   /*font-weight: 600;*/
@@ -218,26 +220,27 @@
   font-size: 24px;
   text-transform: uppercase;
 }
-/* line 174, ../sass/components/_content.scss */
+/* line 176, ../sass/components/_content.scss */
 .region-content #block-forum-content .views-field-body {
   margin-top: 1%;
   margin-bottom: 1%;
 }
-/* line 178, ../sass/components/_content.scss */
+/* line 180, ../sass/components/_content.scss */
 .region-content #block-forum-content .views-field-uid {
   margin-right: 1%;
 }
-/* line 181, ../sass/components/_content.scss */
+/* line 183, ../sass/components/_content.scss */
 .region-content #block-forum-content span.views-label.views-label-view-node {
   margin: 0 20px;
 }
 
 /*Top Videos*/
-/* line 186, ../sass/components/_content.scss */
+/* line 188, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 {
+  order: 30;
   /*Spacing for video teasers*/
 }
-/* line 187, ../sass/components/_content.scss */
+/* line 190, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 > h2.title {
   text-align: center;
   text-transform: uppercase;
@@ -250,22 +253,23 @@
   padding-bottom: 7px;
   padding-top: 7px;
 }
-/* line 199, ../sass/components/_content.scss */
+/* line 202, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 h2.node__title.title {
   border-bottom: none;
 }
-/* line 203, ../sass/components/_content.scss */
+/* line 206, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 .views-row.clearfix {
   display: flex;
 }
-/* line 206, ../sass/components/_content.scss */
+/* line 209, ../sass/components/_content.scss */
 .region-content #block-views-block-videos-block-1 .views-col.col-2 {
   margin-left: 5%;
 }
 
 /*More News*/
-/* line 211, ../sass/components/_content.scss */
+/* line 214, ../sass/components/_content.scss */
 .region-content #block-views-block-more-news-block-1 {
+  order: 40;
   /*Apply flex to article*/
     /*.views-row{
     	display: flex;
@@ -277,7 +281,7 @@
   /*Styling article title*/
   /*Article subtitle*/
 }
-/* line 212, ../sass/components/_content.scss */
+/* line 216, ../sass/components/_content.scss */
 .region-content #block-views-block-more-news-block-1 > h2.title {
   text-align: center;
   text-transform: uppercase;
@@ -290,64 +294,64 @@
   padding-bottom: 7px;
   padding-top: 7px;
 }
-/* line 232, ../sass/components/_content.scss */
+/* line 236, ../sass/components/_content.scss */
 .region-content #block-views-block-more-news-block-1 .view-content {
   display: flex;
   flex-direction: column;
 }
-/* line 236, ../sass/components/_content.scss */
+/* line 240, ../sass/components/_content.scss */
 .region-content #block-views-block-more-news-block-1 .views-row {
   padding-top: 32px;
   padding-bottom: 32px;
   border-bottom: 1px solid lightgrey;
 }
-/* line 241, ../sass/components/_content.scss */
+/* line 245, ../sass/components/_content.scss */
 .region-content #block-views-block-more-news-block-1 a.image-popup.overlayed {
   margin-right: 3%;
 }
-/* line 245, ../sass/components/_content.scss */
+/* line 249, ../sass/components/_content.scss */
 .region-content #block-views-block-more-news-block-1 .views-field-title .field-content a {
   color: black;
   font-weight: 600;
   font-size: 24px;
 }
-/* line 251, ../sass/components/_content.scss */
+/* line 255, ../sass/components/_content.scss */
 .region-content #block-views-block-more-news-block-1 .views-field-body {
   margin-top: 1%;
   margin-bottom: 1%;
 }
-/* line 255, ../sass/components/_content.scss */
+/* line 259, ../sass/components/_content.scss */
 .region-content #block-views-block-more-news-block-1 .views-field-uid {
   margin-right: 1%;
   float: left;
 }
-/* line 259, ../sass/components/_content.scss */
+/* line 263, ../sass/components/_content.scss */
 .region-content #block-views-block-more-news-block-1 .views-field-last-updated {
   float: left;
 }
-/* line 262, ../sass/components/_content.scss */
+/* line 266, ../sass/components/_content.scss */
 .region-content #block-views-block-more-news-block-1 span.views-label.views-label-view-node {
   margin: 0 20px;
 }
 
 /*Sidebar ads*/
-/* line 268, ../sass/components/_content.scss */
+/* line 272, ../sass/components/_content.scss */
 .block-views-blocksidebar-ads-block-1 .view-content .views-row:not(:first-child) {
   margin-top: 10px;
 }
 
 /*Lanscape ad (first)*/
-/* line 273, ../sass/components/_content.scss */
+/* line 277, ../sass/components/_content.scss */
 .views-field-field-landscape-image .field-content {
   display: flex;
 }
 
-/* line 276, ../sass/components/_content.scss */
+/* line 280, ../sass/components/_content.scss */
 img.image-style-landscape-ad {
   margin: auto;
 }
 
-/* line 279, ../sass/components/_content.scss */
+/* line 283, ../sass/components/_content.scss */
 div#top-content {
   background-color: #f3f3f3;
   margin-left: -25px;
@@ -356,21 +360,46 @@ div#top-content {
 }
 
 /*Centering Landscape Ad 2*/
-/* line 286, ../sass/components/_content.scss */
+/* line 290, ../sass/components/_content.scss */
 div#block-views-block-landscape-ad-2-block-1 {
+  order: 35;
   margin: 0 auto;
 }
 
 /*Centering Landscape Ad 3*/
-/* line 291, ../sass/components/_content.scss */
+/* line 296, ../sass/components/_content.scss */
 div#block-views-block-landscape-ad-3-block-1-2 .field-content {
   display: flex;
 }
-/* line 293, ../sass/components/_content.scss */
+/* line 298, ../sass/components/_content.scss */
 div#block-views-block-landscape-ad-3-block-1-2 .field-content img {
   margin: auto;
 }
 
+/*==========*/
+/*Responsive*/
+/*==========*/
+@media (max-width: 991px) {
+  /* line 310, ../sass/components/_content.scss */
+  #main-content .block.block-page-title-block {
+    display: none;
+  }
+  /* line 313, ../sass/components/_content.scss */
+  #main-content > .row .col-md-4 {
+    max-width: 28%;
+    margin-top: 0;
+  }
+
+  /* line 318, ../sass/components/_content.scss */
+  .region-content {
+    flex-direction: column;
+  }
+
+  /* line 321, ../sass/components/_content.scss */
+  .region-content #block-views-block-article-feed-block-1 {
+    order: 25;
+  }
+}
 /* line 1, ../sass/components/_footer.scss */
 #footer {
   background-color: #000;
@@ -460,6 +489,23 @@ div#block-views-block-landscape-ad-3-block-1-2 .field-content img {
   flex: 0;
 }
 
+/*==========*/
+/*Responsive*/
+/*==========*/
+@media (max-width: 768px) {
+  /* line 74, ../sass/components/_footer.scss */
+  #footer .row {
+    width: 100%;
+  }
+  /* line 76, ../sass/components/_footer.scss */
+  #footer .row .region.region-footer-first {
+    flex-wrap: wrap;
+  }
+  /* line 79, ../sass/components/_footer.scss */
+  #footer .row .menu--footer-column-1, #footer .row .menu--footer-column-2, #footer .row .menu--footer-column-23, #footer .row .menu--footer-column-4 {
+    flex: 1 0 50%;
+  }
+}
 /* line 1, ../sass/components/_header.scss */
 #header {
   background-color: #f3f3f3;
@@ -568,9 +614,25 @@ ul.sf-menu.sf-vertical li.sfHover > ul {
 /*==========*/
 /*Responsive*/
 /*==========*/
+/* line 89, ../sass/components/_header.scss */
+body:not(:target) .region-navigation .menu-toggle-target-show:target ~ .menu-toggle--hide {
+  display: none;
+}
+
 @media (max-width: 991px) and (min-width: 768px) {
-  /* line 89, ../sass/components/_header.scss */
+  /* line 94, ../sass/components/_header.scss */
   .region-navigation .menu-item, body:not(:target) .region-navigation .menu-item, .region-navigation .menu .menu-item a:hover {
     background-color: transparent;
   }
+}
+@media (max-width: 991px) {
+  /* line 99, ../sass/components/_header.scss */
+  .region-navigation div#block-liveweatherblock {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  /*body:not(:target) .region-navigation .menu-toggle-target-show:target ~ .menu-toggle--hide {
+      display: none;
+  }*/
 }
