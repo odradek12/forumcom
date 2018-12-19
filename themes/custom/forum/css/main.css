@@ -614,19 +614,23 @@ ul.sf-menu.sf-vertical li.sfHover > ul {
 /*==========*/
 /*Responsive*/
 /*==========*/
-/* line 89, ../sass/components/_header.scss */
-body:not(:target) .region-navigation .menu-toggle-target-show:target ~ .menu-toggle--hide {
-  display: none;
+/*body:not(:target) .region-navigation .menu-toggle-target-show:target ~ .menu-toggle--hide {
+    display: none; 
+    visibility: hidden;
+}*/
+/* line 93, ../sass/components/_header.scss */
+body:not(:target) .region-navigation .menu-toggle {
+  visibility: hidden;
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
-  /* line 94, ../sass/components/_header.scss */
+  /* line 98, ../sass/components/_header.scss */
   .region-navigation .menu-item, body:not(:target) .region-navigation .menu-item, .region-navigation .menu .menu-item a:hover {
     background-color: transparent;
   }
 }
 @media (max-width: 991px) {
-  /* line 99, ../sass/components/_header.scss */
+  /* line 103, ../sass/components/_header.scss */
   .region-navigation div#block-liveweatherblock {
     display: none;
   }
