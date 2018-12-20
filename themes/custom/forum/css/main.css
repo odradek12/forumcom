@@ -400,6 +400,12 @@ div#block-views-block-landscape-ad-3-block-1-2 .field-content img {
     order: 25;
   }
 }
+@media (max-width: 399px) {
+  /* line 326, ../sass/components/_content.scss */
+  #main-content > .row .col-md-4 {
+    display: none;
+  }
+}
 /* line 1, ../sass/components/_footer.scss */
 #footer {
   background-color: #000;

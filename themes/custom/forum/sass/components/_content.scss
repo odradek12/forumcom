@@ -322,3 +322,8 @@ div#block-views-block-landscape-ad-3-block-1-2{
 		order: 25;
 	}
 }
+@media (max-width: 399px) {
+	#main-content > .row .col-md-4 {
+		display: none;
+	}
+}
